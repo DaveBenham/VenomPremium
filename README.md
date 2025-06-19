@@ -29,13 +29,13 @@ Sofia's Daughter can be divided into 5 distinct regions, each with its own purpo
 ## Ripple Sections
 ![Ripple sections image](doc/RippleSections.png)  
 
+![Warp Effects image](doc/WarpEffects.png)
+
 ## Global Section
 ![Global section image](doc/GlobalSection.png)
 
 ## Outputs Section
 ![Outputs section image](doc/OutputsSection.png)  
-
-![Warp Effects image](doc/WarpEffects.png)
 
 
 
