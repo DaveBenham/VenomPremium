@@ -23,7 +23,17 @@ Sofia's Daughter can be divided into 5 distinct regions, each with its own purpo
 - Global (mid center): Controls the mix of the three elements, plus additional controls that effect all three elements
 - Outputs (bottom): Nine different outputs are available
 
+## Fundamental Section
+![Fundamental section image](doc/FundamentalSection.png)  
 
+## Ripple Sections
+![Ripple sections image](doc/RippleSections.png)  
+
+## Global Section
+![Global section image](doc/GlobalSection.png)
+
+## Outputs Section
+![Outputs section image](doc/OutputsSection.png)  
 
 ![Warp Effects image](doc/WarpEffects.png)
 
