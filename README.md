@@ -219,7 +219,7 @@ Each input that is upsampled with interpolation consumes a significant amount of
 
 ### Polyphony Reset
 
-Once polyphony is introduced at any one of the CV inputs, all outputs become polyphonic. If there is a feedback loop from one of Sofia's Daughter's outputs to one of the inputs, then the output will remain polyphonic even after all external polyphonic CV sources are removed. In this case all poly channels will produce the same signal, except for possible phase differences.
+Once polyphony is introduced at any one of the CV inputs, all outputs become polyphonic. If there is a feedback loop from one of the outputs to one of the inputs, then all output will remain polyphonic even after all external polyphonic CV sources are removed. In this case all poly channels will produce the same signal, except for possible phase differences.
 
 The **RESET POLY** button can be used to temporarily force all outputs to monophonic so that upon release, the outputs will revert back to the maximum number of channels found across all external CV inputs.
 
