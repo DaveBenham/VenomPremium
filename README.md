@@ -15,7 +15,7 @@ Here is one example of an output waveform, along with the three component elemen
 
 With these three basic building blocks, plus a bunch of modulation possibilities, Sofia's Daughter can produce an astonishing range of sounds. Of course the output works well with VCAs and Filters, but rich resonant sounds can be produced without a filter. And the Ripple decay envelopes coupled with available one shot modes allow for the creation of percussive and bell-like voices without the need of external VCAs or envelope generators.
 
-All inputs can be driven at audio rates. Oversampling is available to mitigate aliasing that might otherwise be present at the outputs.
+All inputs can be driven at audio rates. Oversampling is available to mitigate digital aliasing that might otherwise be present at the outputs.
 
 Because all inputs and outputs are polyphonic, a single instance of Sofia's Daughter can create up to 16 independent voices. The total number of output channels at each port is the maximum number of channels found across all inputs. If an input is monophonic, than the single channel is replicated to match the output channel count. If a polyphonic input has fewer channels than the outputs, then missing channels are treated as constant 0V.
 
@@ -29,7 +29,7 @@ Sofia's Daughter can be divided into 5 distinct sections, each with its own purp
 
 ## Fundamental Section
 ![Fundamental section image](doc/FundamentalSection.png)  
-The Fundamental has six basic types of control
+The Fundamental sine wave has six basic types of control
 - Frequency
 - Mode
 - Saturation
@@ -53,7 +53,7 @@ The **1 SHOT** button controls the mode of the Fundamental oscillator. It has th
 
 ### Fundamental Saturation
 
-The top left small **SATURATE** knob controls the base amount of saturation to apply to the sine wave. Fully counter-clockwise applies no saturation, and fully clockwise applies the maximum amount of saturation allowed. The default at noon is 50% of the maximum.
+The left small knob below the **SATURATE** label controls the base amount of saturation to apply to the sine wave. Fully counter-clockwise applies no saturation, and fully clockwise applies the maximum amount of saturation allowed. The default at noon is 50% of the maximum.
 
 The degree of saturation can be modulated by the associated CV input with its small attenuverter knob. One volt of CV at 100% represents 10% saturation.
 
