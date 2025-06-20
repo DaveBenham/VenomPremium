@@ -114,7 +114,7 @@ The square **WAVE** button sets the basic waveform of the Ripple element. It has
 - **Square**
 
 ### Ripple Envelope Decay
-The Ripple decay envelope controls how each Ripple envelope is damped. It always has an instantaneous attack, and the linear decay length is always measured as a ratio of the Fundamental wavelength.
+The Ripple decay envelope controls how each Ripple envelope is damped. It always has an instantaneous attack, and the decay length is always measured as a ratio of the Fundamental wavelength.
 
 The **DECAY TRACK** button controls whether the decay length tracks CV at the Fundamental V/Oct input. If off, then only the Fundamental Octave and Pitch knobs affect the decay length. If on, then the V/Oct CV is added to the computation.
 
