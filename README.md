@@ -24,7 +24,7 @@ Sofia's Daughter can be divided into 5 distinct sections, each with its own purp
 - **Fundamental** ***(top center)***: Controls the frequency, shape, and timing of the fundamental sine wave
 - **Ripple A** ***(left)***: Controls the frequency, decay, and shape of the first ripple element
 - **Ripple B** ***(right)***: Controls the frequency, decay, and shape of the second ripple element
-- **Global** ***(mid center)***: Controls the mix of the three elements, plus additional controls that effect all three elements
+- **Global** ***(mid center)***: Controls the mix of the three elements, plus additional controls that affect all three elements
 - **Outputs** ***(bottom)***: Nine different outputs are available
 
 ## Fundamental Section
