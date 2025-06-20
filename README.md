@@ -47,7 +47,7 @@ The **V/OCT** CV input further offsets the fundamental frequency. Each volt repr
 ### Fundamental Mode
 
 The **1 SHOT** button controls the mode of the Fundamental oscillator. It has three states.
-- **Off** ***(white, default)***: The fundamental oscillates continuously
+- **Off** ***(gray, default)***: The fundamental oscillates continuously
 - **Retriggered one shot** ***(yellow)***: The fundamental produces one single wave cycle upon receiving a trigger at the Hard Sync input, then stops and waits for the next trigger. The oscillator can be retriggered to start afresh mid-cycle.
 - **Triggered one shot** ***(blue)***: Same as Retriggered one shot, except triggers received mid-cycle are ignored.
 
