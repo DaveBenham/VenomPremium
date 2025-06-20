@@ -30,7 +30,7 @@ Check out [placeholder for link to Omri's video] for an overview of Sofia's Daug
 ## Sofia's Daughter Layout
 Sofia's Daughter can be divided into 5 distinct sections, each with its own purpose
 - **[Fundamental](#fundamental-section)** ***(top center)***: Controls the frequency, shape, and timing of the fundamental sine wave
-- **[Ripple A](#ripples-section)** ***(left)***: Controls the frequency, decay, and shape of the first ripple element
+- **[Ripple A](#ripple-sections)** ***(left)***: Controls the frequency, decay, and shape of the first ripple element
 - **[Ripple B](#ripples-section)** ***(right)***: Controls the frequency, decay, and shape of the second ripple element
 - **[Global](#global-section)** ***(mid center)***: Controls the mix of the three elements, plus additional controls that affect all three elements
 - **[Outputs](#output-section)** ***(bottom)***: Nine different outputs are available
