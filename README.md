@@ -76,7 +76,7 @@ Note that Fundamental FM never applies to the Ripple frequency or decay length c
 
 Phase modulation can be applied to the Fundamental wave via the **PM** CV input, with its own dedicated attenuator. Phase modulation is often incorrectly referred to as through zero linear FM, and with sinusoidal CV it can give the same results. But other waveforms produce different results than true linear FM.
 
-Phase modulation can cause folding of the fundamental wave such that it changes the rate at which the Ripple elements are triggered.
+Phase modulation can cause folding of the fundamental wave. But unlike the frequency modulation, phase modulation never alters the rate at which the Ripple elements are triggered.
 
 ### Fundamental Sync
 
