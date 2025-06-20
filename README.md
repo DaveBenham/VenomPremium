@@ -154,7 +154,7 @@ The warp values range from an arbitrary -100% to 100%
 
 The **WARP** knob sets the base Warp value. The associated CV input and small attenuverter can modulate the Warp value. The sum of the knob plus attenuated CV is clamped to the range for the current mode.
 
-The diagrams below demonstrate the different Warp effects that are available. CCW represents full counter-clockwise, and CW represents clockwise.
+The diagrams below demonstrate the different Warp effects that are available. CCW represents full counter-clockwise, and CW represents full clockwise.
 
 ![Warp Effects image](doc/WarpEffects.png)
 
