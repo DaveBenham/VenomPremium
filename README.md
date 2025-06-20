@@ -1,6 +1,12 @@
 # VenomPremium
 Documentation for Venom Premium Plugins for VCV Rack
 
+# Venom Oscillations plugin
+The Venom Oscillations plugin is intended to be a set of complex oscillator modules that produce interesting sounds that are difficult to produce otherwise.
+
+Currently there is only one module, Sofia's Daughter.
+
+I have tentative plans for at least one more complex oscillator. If/when a new oscillator is added, the plugin purchase price will likely increase in $5 increments. However, existing plugin owners will receive the new module for free.
 
 # Sofia's Daughter
 ![Sofia's Daughter module image](doc/SofiasDaughter.png)  
@@ -265,8 +271,8 @@ The parameter value cannot be changed by any means while the parameter is locked
 **Custom Defaults**  
 A custom default value overrides the factory default whenever a parameter is initialized. An additional parameter menu option is added to restore the factory default whenever a custom default is in effect.
 
-**Themes**
-The module context menu includes options to set the default theme and default dark theme for the VenomOcillations plugin, as well as a theme override for each module instance.
+### Themes
+The module context menu includes options to set the default theme and default dark theme for the VenomOscillations plugin, as well as a theme override for each module instance.
 
 There are 4 themes to choose from.
 
