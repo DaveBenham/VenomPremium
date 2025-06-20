@@ -114,6 +114,8 @@ The **DECAY** slider sets the ratio of the envelope decay length to the Fundamen
 
 The associated decay CV input and attenuverter knob can modulate the decay length. Both the slider and the CV respond exponentially. The effective decay length ratio is clamped to a value between 1/64 and 16.
 
+Note that envelopes with a ratio >1 never reach the end unless a one shot mode is used because the start of the next Fundamental cycle retriggers the Ripple envelopes. So the maximum decay ratio of 16 results in minimal dampening of the Ripple element.
+
 ### Ripple Frequency
 The Ripple frequency is always measured as a ratio of the Fundamental frequency.
 
