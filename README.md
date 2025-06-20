@@ -173,7 +173,7 @@ The diagrams below demonstrate the different Warp effects that are available. CC
 Phase modulation can be applied to the Ripple wave via the **PM** CV input, with its own dedicated attenuator.
 
 ## Global Section
-![Global section image](doc/GlobalSection.png)
+![Global section image](doc/GlobalSection.png)  
 The Global section controls the following:
 - Overall mix of the main output
 - Frequency Modulation applied to the Fundamental and both Ripple elements
