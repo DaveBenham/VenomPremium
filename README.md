@@ -230,15 +230,15 @@ The **RESET POLY** button can be used to temporarily force all outputs to monoph
 
 There are nine outputs available across the bottom of the module.
 
-- **A Env** - the unipolar decay envelope for Ripple A
-- **A Raw** - the constant bipolar Ripple A signal without any damping from the decay envelope
-- **A Damp** - the bipolar damped Ripple A signal after the A decay envelope has been applied
-- **Raw Fund** - the bipolar Fundamental sine signal without any saturation
-- **Final Mix** - the bipolar mix of saturated Fundamental sine and both damped Ripple elements
-- **Sat Fund** - the bipolar Fundamental sine signal with saturation applied
-- **B Damp** - the bipolar damped Ripple B signal after the B decay envelope has been applied
-- **B Raw** - the constant bipolar Ripple B signal without any damping from the decay envelope
-- **B Env** - the unipolar decay envelope for Ripple B
+- **A ENV** - the unipolar decay envelope for Ripple A
+- **A RAW** - the constant bipolar Ripple A signal without any damping from the decay envelope
+- **A DAMP** - the bipolar damped Ripple A signal after the A decay envelope has been applied
+- **RAW FUND** - the bipolar Fundamental sine signal without any saturation
+- **FINAL MIX** - the bipolar mix of saturated Fundamental sine and both damped Ripple elements
+- **SAT FUND** - the bipolar Fundamental sine signal with saturation applied
+- **B DAMP** - the bipolar damped Ripple B signal after the B decay envelope has been applied
+- **B RAW** - the constant bipolar Ripple B signal without any damping from the decay envelope
+- **B ENV** - the unipolar decay envelope for Ripple B
 
 Any of the outputs can be used as an audio source, or as a modulator. Many interesting sounds can be found by patching an output into one of Sofia's Daughter CV inputs, thus creating a feedback loop.
 
