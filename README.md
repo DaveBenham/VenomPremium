@@ -6,7 +6,7 @@ Documentation for Venom Premium Plugins for VCV Rack
 ![Sofia's Daughter module image](doc/SofiasDaughter.png)  
 Sofia's Daughter is a complex polyphonic formant oscillator inspired by the wonderful [XAOC Devices Sofia "1955 Transcendent Analog Waveform Oscillator"](http://xaocdevices.com/main/sofia). Sofia's Daughter implements all the basic functionality (though not necessarily the exact sound) of the XAOC Eurorack hardware module, and then extends the functionality with additional controls, inputs, and outputs.
 
-The underlying principle behind the module is FOF (fonction d'onde formantique) synthesis, a method of producing formant sounds through short bursts of decaying sinusoidal waveforms. The primary output of Sofia's Daughter consists of two such decaying sinusoidal waveforms, called Ripple elements, combined with a saturated sine wave called the Fundamental. The Fundamental triggers (hard syncs) the Ripple elements as well as their decay envelopes. The Ripple frequencies are measured as ratios of the Fundamenal frequency, and the Ripple decay length is proportional to the Fundamental wavelength. Sofia's Daughter extends the FOF synthesis by allowing waveforms other than sine for the Ripple elements.
+The underlying principle behind the module is FOF (fonction d'onde formantique) synthesis, a method of producing formant sounds through short bursts of decaying sinusoidal waveforms. The primary output of Sofia's Daughter consists of two such decaying sinusoidal waveforms, called Ripple elements, combined with a saturated sine wave called the Fundamental. The Fundamental wave hard syncs the Ripple elements as well triggers their decay envelopes. The Ripple frequencies are measured as ratios of the Fundamenal frequency, and the Ripple decay length is proportional to the Fundamental wavelength. Sofia's Daughter extends the FOF synthesis by allowing waveforms other than sine for the Ripple elements.
 
 Because the Ripple elements are always phase aligned with the Fundamental, the output can remain harmonious, regardless what frequency ratios are used for the Ripples.
 
@@ -55,7 +55,7 @@ The **1 SHOT** button controls the mode of the Fundamental oscillator. It has th
 
 The top left small **SATURATE** knob controls the base amount of saturation to apply to the sine wave. Fully counter-clockwise applies no saturation, and fully clockwise applies the maximum amount of saturation allowed. The default at noon is 50% of the maximum.
 
-The associated CV input is attenuated by the small attenuverter in the upper right, with 1V representing 10% saturation.
+The degree of saturation can be modulated by the associated CV input with its small attenuverter knob. One volt of CV at 100% represents 10% saturation.
 
 The net sum of base saturation plus attenuated CV is clamped to a value between 0% and 100%.
 
@@ -89,13 +89,84 @@ Both sync inputs use Schmitt triggers that are triggered at 2V and reset at 0.2V
 ## Ripple Sections
 ![Ripple sections image](doc/RippleSections.png)  
 
+The Ripple A and Ripple B sections behave identically, other than being mirror images of each other.
+
+Each Ripple has five main types of control:
+- Waveform
+- Envelope decay length
+- Ripple frequency
+- Warp modulation that has different effects, depending on the mode
+- Phase modulation
+
+### Ripple Waveform
+
+The square **WAVE** button sets the basic shape of the Ripple wave. It has three possible values:
+- **Sine**
+- **Triangle**
+- **Square**
+
+### Ripple Envelope Decay
+The Ripple decay envelope controls how each Ripple envelope is dampened. It always has an instantaneous attack, and the decay is always measured as a ratio of the Fundamental wavelength.
+
+The **DECAY TRACK** button controls whether the decay length tracks CV at the Fundamental V/Oct input. If off, then only the Fundamental Octave and Pitch knobs affect the decay length. If on, then the V/Oct CV is added to the computation.
+
+The **DECAY** slider sets the ratio of the envelope decay length to the Fundamental wavelength. It ranges from 0.015625 (1/64) to 16 times the Fundamental wavelength.
+
+The associated decay CV input and attenuverter knob can modulate the decay length. Both the slider and the CV respond exponentially. The effective decay length ratio is clamped to a value between 1/64 and 16.
+
+### Ripple Frequency
+The Ripple frequency is always measured as a ratio of the Fundamental frequency.
+
+The **FREQ TRACK** button controls whether the ripple frequency tracks CV at the Fundamental V/Oct input. If off, then only the Fundamental Octave and Pitch knobs affect the decay length (as well as any Global FM). If on, then the V/Oct CV is added to the computation.
+
+The **FREQ** slider sets the ratio of the Ripple frequency to the Fundamental frequency. It ranges from 1 to 256 times the Fundamental frequency.
+
+The associated frequency CV input and attenuverter knob can modulate the frequency ratio. Both the slider and CV respond exponentially. The effective frequency ratio is clamped to a value between 1 and 256.
+
+### Ripple Warp Modulation
+The small button above the **WARP** label controls the mode of the Warp modulation. There are a total of nine modes. In general, the Warp can either influence the Ripple frequency, the envelope decay curve, or the Ripple waveform shape. The button is color coded.
+
+**Frequency ramp modulation available to all waveforms**
+- **Frequency ramp** ***(white, default)***: The warp value specifies a ratio of the base frequency that each ripple starts at, and then modulates to the base frequency by the end of the envelope decay. This is the warp effect implemented by the XAOC Sofia hardware.
+- **Inverse frequency ramp** ***(yellow)***: The ripple starts at the base frequency, and the frequency modulates to the warp ratio value by the end of the envelope decay.
+
+The warp ratio value ranges from 0.25 (1/4) to 4 times the base frequency.
+
+**Envelope decay curve modulation available to all waveforms**
+- **Envelope J-curve** ***(brown or dark red)***
+- **Envelope S-curve** ***(tan)***
+
+The warp values range from an arbitrary -100% to 100%.
+
+**Ripple shape modulation available to all waveforms**
+- **Ripple PWM** ***(red)***: Pulse width modulation
+
+The warp values range from 10% to 90%. For sine and triangle waveforms the percentage represents the width of the positive portion of the waveform. The negative portion is shrunk or expanded to total 100%.
+
+**Ripple shape modulation available only to sine and triangle**  
+The same colors are available to square, but they simply repeat the first four modes.
+- **Ripple skew** ***(orange)***
+- **Ripple J-curve** ***(dark blue)***
+- **Ripple S-curve** ***(light blue)***
+- **Ripple rectify** ***(green)***
+
+The warp values range from an arbitrary -100% to 100%
+
+The **WARP** knob sets the base Warp value. The associated CV input and small attenuverter can modulate the Warp value. The sum of the knob plus attenuated CV is clamped to the range for the current mode.
+
+The diagrams below demonstrate the different Warp effects that are available. CCW represents full counter-clockwise, and CW represents clockwise.
+
 ![Warp Effects image](doc/WarpEffects.png)
+
+### Ripple Phase Modulation
+
+Phase modulation can be applied to the Ripple wave via the **PM** CV input, with its own dedicated attenuator.
 
 ## Global Section
 ![Global section image](doc/GlobalSection.png)
 
-## Outputs Section
-![Outputs section image](doc/OutputsSection.png)  
+## Output Section
+![Output section image](doc/OutputsSection.png)  
 
 
 
