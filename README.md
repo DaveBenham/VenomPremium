@@ -35,6 +35,8 @@ Sofia's Daughter can be divided into 5 distinct sections, each with its own purp
 - **[Global](#global-section)** ***(mid center)***: Controls the mix of the three elements, plus additional controls that affect all three elements
 - **[Outputs](#output-section)** ***(bottom)***: Nine different outputs are available
 
+There are also [context menu options](#context-menus) that give access to some additional minor functionality.
+
 ## Fundamental Section
 ![Fundamental section image](doc/FundamentalSection.png)  
 The Fundamental sine wave has six basic types of control
