@@ -25,15 +25,15 @@ All inputs can be driven at audio rates. Oversampling is available to mitigate d
 
 Because all inputs and outputs are polyphonic, a single instance of Sofia's Daughter can create up to 16 independent voices. The total number of output channels at each port is the maximum number of channels found across all inputs. If an input is monophonic, than the single channel is replicated to match the output channel count. If a polyphonic input has fewer channels than the outputs, then missing channels are treated as constant 0V.
 
-Check out [placeholder for link to Omri's video] for an overview of Sofia's Daughter. You might also check out video's about the XAOC Devices Sofia from [Tom Chuchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
+Check out [placeholder for link to Omri's video] for an overview of Sofia's Daughter. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
 
 ## Sofia's Daughter Layout
 Sofia's Daughter can be divided into 5 distinct sections, each with its own purpose
-- **Fundamental** ***(top center)***: Controls the frequency, shape, and timing of the fundamental sine wave
-- **Ripple A** ***(left)***: Controls the frequency, decay, and shape of the first ripple element
-- **Ripple B** ***(right)***: Controls the frequency, decay, and shape of the second ripple element
-- **Global** ***(mid center)***: Controls the mix of the three elements, plus additional controls that affect all three elements
-- **Outputs** ***(bottom)***: Nine different outputs are available
+- **[Fundamental](#fundamental-section)** ***(top center)***: Controls the frequency, shape, and timing of the fundamental sine wave
+- **[Ripple A](#ripples-section)** ***(left)***: Controls the frequency, decay, and shape of the first ripple element
+- **[Ripple B](#ripples-section)** ***(right)***: Controls the frequency, decay, and shape of the second ripple element
+- **[Global](#global-section)** ***(mid center)***: Controls the mix of the three elements, plus additional controls that affect all three elements
+- **[Outputs](#output-section)** ***(bottom)***: Nine different outputs are available
 
 ## Fundamental Section
 ![Fundamental section image](doc/FundamentalSection.png)  
