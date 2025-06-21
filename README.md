@@ -73,7 +73,7 @@ The net sum of base saturation plus attenuated CV is clamped to a value between 
 
 ### Fundamental Frequency Modulation
 
-Frequency modulation can be applied to the Fundamental wave via the **FM** CV input, with its own dedicated attenuater.
+Frequency modulation can be applied to the Fundamental wave via the **FM** CV input, with its own dedicated attenuator.
 
 There are three FM modes controlled by the small associated **LIN** button.
 - **Off** ***(gray, default)***: Exponential FM is used. The CV is DC coupled.
