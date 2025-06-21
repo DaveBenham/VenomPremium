@@ -108,6 +108,8 @@ Each Ripple has five main types of control:
 - Warp modulation that has different effects, depending on the mode
 - Phase modulation
 
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+
 ### Ripple Waveform
 
 The square **WAVE** button sets the basic waveform of the Ripple element. It has three possible values:
@@ -174,6 +176,8 @@ The diagrams below demonstrate the different Warp effects that are available. CC
 
 Phase modulation can be applied to the Ripple wave via the **PM** CV input, with its own dedicated attenuator.
 
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+
 ## Global Section
 ![Global section image](doc/GlobalSection.png)  
 The Global section controls the following:
@@ -225,6 +229,8 @@ Once polyphony is introduced at any one of the CV inputs, all outputs become pol
 
 The **RESET POLY** button can be used to temporarily force all outputs to monophonic so that upon release, the outputs will revert back to the maximum number of channels found across all external CV inputs.
 
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+
 ## Output Section
 ![Output section image](doc/OutputsSection.png)  
 
@@ -245,6 +251,8 @@ Any of the outputs can be used as an audio source, or as a modulator. Many inter
 ### Bypass Behavior
 
 All outputs are constant monophonic 0V if Sofia's Daughter is bypassed.
+
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
 
 ## Context Menus
 
@@ -288,3 +296,6 @@ If a module instance is set to use a specific theme, then that theme will be use
 If you want the default theme to disregard the VCV Rack dark panel setting, then simply set both defaults to the same theme.
 
 The factory default theme is ivory, and the factory default dark theme is coal.
+
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+
