@@ -9,6 +9,8 @@ Currently there is only one module, Sofia's Daughter.
 I have tentative plans for at least one more complex oscillator. If/when a new oscillator is added, the plugin purchase price will likely increase in $5 increments. However, existing plugin owners will receive the new module for free.
 
 # Sofia's Daughter
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+
 ![Sofia's Daughter module image](doc/SofiasDaughter.png)  
 Sofia's Daughter is a complex polyphonic formant oscillator inspired by the wonderful [XAOC Devices Sofia "1955 Transcendent Analog Waveform Oscillator"](http://xaocdevices.com/main/sofia). Sofia's Daughter implements all the basic functionality (though not necessarily the exact sound) of the XAOC Eurorack hardware module, and then extends the functionality with additional controls, inputs, and outputs.
 
@@ -17,6 +19,7 @@ The underlying principle behind the module is FOF (fonction d'onde formantique) 
 Because the Ripple elements are always phase aligned with the Fundamental, the output can remain harmonious, regardless what frequency ratios are used for the Ripples.
 
 Here is one example of an output waveform, along with the three component elements.
+
 ![Example output waveform image](doc/FinalMixComponents.png)  
 
 With these three basic building blocks, plus a bunch of modulation possibilities, Sofia's Daughter can produce an astonishing range of sounds. Of course the output works well with VCAs and Filters, but rich resonant sounds can be produced without a filter. And the Ripple decay envelopes coupled with available one shot modes allow for the creation of percussive and bell-like voices without the need of external VCAs or envelope generators.
