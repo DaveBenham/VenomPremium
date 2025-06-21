@@ -27,6 +27,8 @@ Because all inputs and outputs are polyphonic, a single instance of Sofia's Daug
 
 Check out [placeholder for link to Omri's video] for an overview of Sofia's Daughter. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
 
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+
 ## Sofia's Daughter Layout
 Sofia's Daughter can be divided into 5 distinct sections, each with its own purpose
 - **[Fundamental](#fundamental-section)** ***(top center)***: Controls the frequency, shape, and timing of the fundamental sine wave
@@ -96,6 +98,8 @@ The **SOFT SYNC** CV input reverses the direction of the fundamental wave upon r
 
 Both sync inputs use Schmitt triggers that are triggered at 2V and reset at 0.2V so they can be used with both unipolar and bipolar inputs.
 
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+
 ## Ripple Sections
 ![Ripple sections image](doc/RippleSections.png)  
 
@@ -107,8 +111,6 @@ Each Ripple has five main types of control:
 - Ripple frequency
 - Warp modulation that has different effects, depending on the mode
 - Phase modulation
-
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
 
 ### Ripple Waveform
 
