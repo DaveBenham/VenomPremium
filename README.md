@@ -214,7 +214,7 @@ There are three FM modes controlled by the small associated **LIN** button.
 Even though the Global FM modulates the Ripple element frequencies, it does not modulate the Ripple decay times. However, since global FM can fold the Fundamental sine, it can alter the rate at which the Ripple envelopes are triggered.
 
 ### Oversampling
-DPW antialiasing is always applied to Ripple square waves, and sine and triangle waves rarely have significant aliasing. So in the absence of any CV modulation, oversampling is rarely needed. But if audio rate CV modulation is applied, then unwanted digital aliasing can arise.
+DPW antialiasing is always applied to Ripple square waves, and simple sine and triangle waves rarely have significant aliasing. So in the absence of any CV modulation, oversampling is rarely needed. But if audio rate CV modulation is applied, then unwanted digital aliasing can arise.
 
 The square **OVER SAMPLE** button controls oversampling that is used to mitigate digital aliasing. It has 6 values:
 - **Off** ***(default)***
@@ -224,7 +224,7 @@ The square **OVER SAMPLE** button controls oversampling that is used to mitigate
 - **x16**
 - **x32**
 
-When oversampling is activated, every CV input is upsampled with interpolation to the oversample rate times the VCV sample rate. All internal processing is done at the oversample rate. At each output, a low pass filter removes high frequency content that would alias before the signal is downsampled back to the VCV sample rate.
+When oversampling is activated, every CV input is upsampled with interpolation to the oversample rate times the VCV sample rate. All internal processing is done at this elevated rate. At each output, a low pass filter removes high frequency content that would alias at the original VCV sample rate, and then the signal is downsampled back to the VCV sample rate.
 
 Each input that is upsampled with interpolation consumes a significant amount of CPU power, as does the low pass filter for each output. So if your system has limited CPU power, it may be wise to avoid oversampling unless unwanted aliasing is detected in the output. And if oversampling is used, the lowest value should be used that provides acceptable results.
 
