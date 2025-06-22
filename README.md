@@ -136,7 +136,7 @@ Note that envelopes with a ratio >1 never reach the end unless a one shot mode i
 ### Ripple Frequency
 The Ripple frequency is always measured as a ratio of the Fundamental frequency.
 
-The **FREQ TRACK** button controls whether the ripple frequency tracks CV at the Fundamental V/Oct input. If off, then only the Fundamental Octave and Pitch knobs affect the decay length (as well as any Global FM). If on, then the V/Oct CV is added to the computation.
+The **FREQ TRACK** button controls whether the ripple frequency tracks CV at the Fundamental V/Oct input. If off, then only the Fundamental Octave and Pitch knobs affect the frequency (as well as any Global FM). If on, then the V/Oct CV is added to the computation.
 
 The **FREQ** slider sets the ratio of the Ripple frequency to the Fundamental frequency. It ranges from 1 to 256 times the Fundamental frequency.
 
@@ -155,12 +155,12 @@ The warp ratio value ranges from 0.25 (1/4) to 4 times the base frequency.
 - **Envelope J-curve** ***(brown or dark red)***
 - **Envelope S-curve** ***(tan)***
 
-The warp values range from an arbitrary -100% to 100%.
+The warp value ranges from an arbitrary -100% to 100%.
 
 **Ripple shape modulation available to all waveforms**
 - **Ripple PWM** ***(red)***: Pulse width modulation
 
-The warp values range from 10% to 90%. For sine and triangle waveforms the percentage represents the width of the positive portion of the waveform. The negative portion is shrunk or expanded to total 100%.
+The warp value ranges from 10% to 90%. For sine and triangle waveforms the percentage represents the width of the positive portion of the waveform. The negative portion is shrunk or expanded to total 100%.
 
 **Ripple shape modulation available only to sine and triangle**  
 The same colors are available to square, but they simply repeat the first four modes.
@@ -169,7 +169,7 @@ The same colors are available to square, but they simply repeat the first four m
 - **Ripple S-curve** ***(light blue)***
 - **Ripple rectify** ***(green)***
 
-The warp values range from an arbitrary -100% to 100%
+The warp value ranges from an arbitrary -100% to 100%
 
 The **WARP** knob sets the base Warp value. The associated bipolar CV input and small attenuverter can modulate the Warp value. The sum of the knob plus attenuated CV is clamped to the range for the current mode. With the Warp knob at the default noon position, and no CV, there is no Warp effect.
 
