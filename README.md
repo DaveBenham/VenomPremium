@@ -26,7 +26,7 @@ With these three basic building blocks, plus a bunch of modulation possibilities
 
 All inputs can be driven at audio rates. Oversampling is available to mitigate digital aliasing that might otherwise be present at the outputs.
 
-Because all inputs and outputs are polyphonic, a single instance of Sofia's Daughter can create up to 16 independent voices. The total number of output channels at each port is the maximum number of channels found across all inputs. If an input is monophonic, than the single channel is replicated to match the output channel count. If a polyphonic input has fewer channels than the outputs, then missing channels are treated as constant 0V.
+Because all inputs and outputs are polyphonic, a single instance of Sofia's Daughter can create up to 16 independent voices. The total number of channels at each output port is the maximum number of channels found across all inputs. If an input is monophonic, than the single channel is replicated to match the output channel count. If a polyphonic input has fewer channels than the outputs, then missing channels are treated as constant 0V.
 
 Check out [placeholder for link to Omri's video] for an overview of Sofia's Daughter. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
 
