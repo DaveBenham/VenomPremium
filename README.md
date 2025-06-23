@@ -214,7 +214,7 @@ There are three FM modes controlled by the small associated **LIN** button.
 Even though the Global FM modulates the Ripple element frequencies, it does not modulate the Ripple decay times. However, since global FM can fold the Fundamental sine, it can alter the rate at which the Ripple envelopes are triggered.
 
 ### Oversampling
-DPW antialiasing is always applied to Ripple square waves, and simple sine and triangle waves rarely have significant aliasing. So in the absence of any CV modulation, oversampling is rarely needed. But if audio rate CV modulation is applied, then unwanted digital aliasing can arise.
+DPW antialiasing is applied to Ripple square waves, and simple sine and triangle waves rarely have significant aliasing. So in the absence of any CV modulation, oversampling is rarely needed. But if audio rate CV modulation is applied, then unwanted digital aliasing can arise.
 
 The square **OVER SAMPLE** button controls oversampling that is used to mitigate digital aliasing. It has 6 values:
 - **Off** ***(default)***
