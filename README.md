@@ -66,7 +66,7 @@ The **1 SHOT** button controls the mode of the Fundamental oscillator. It has th
 - **Retriggered one shot** ***(yellow)***: The fundamental produces one single wave cycle upon receiving a trigger at the Hard Sync input, then stops and waits for the next trigger. The oscillator can be retriggered to start afresh mid-cycle.
 - **Triggered one shot** ***(blue)***: Same as Retriggered one shot, except triggers received mid-cycle are ignored.
 
-Remember that the Fundamental triggers the Ripple envelopes every cycle. So if using a one shot mode, each time the Fundamental is triggered, it also triggers the Ripple envelopes.
+Remember that the Fundamental triggers the Ripple envelopes every cycle. So if using a one shot mode, each time the Fundamental is triggered, it also triggers the Ripple envelopes. Upon envelope completion, the Ripple envelope will wait for the next trigger, just like the Fundamental.
 
 ### Fundamental Saturation
 
@@ -135,7 +135,7 @@ The associated bipolar Decay CV input and attenuverter knob can modulate the dec
 
 Note that envelopes with a ratio >1 normally never reach the end because the start of the next Fundamental cycle retriggers the Ripple envelopes. So the maximum decay ratio of 16 results in minimal damping of the Ripple element.
 
-But if using a Fundamental one shot mode, the Ripple envelopes are triggered the same time as the Fundamental, and the envelopes always decay to completion unless another trigger is received.
+But if using a Fundamental one shot mode, the Ripple envelopes are triggered the same time as the Fundamental, and the envelopes always decay to completion unless another trigger is received. Upon completion, each envelope waits for the next Fundamental trigger.
 
 ### Ripple Frequency
 The Ripple frequency is always measured as a ratio of the Fundamental frequency.
