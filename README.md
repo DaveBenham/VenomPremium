@@ -14,7 +14,7 @@ I have tentative plans for at least one more complex oscillator. If/when a new o
 ![Sofia's Daughter module image](doc/SofiasDaughter.png)  
 Sofia's Daughter is a complex polyphonic formant oscillator inspired by the wonderful [XAOC Devices Sofia "1955 Transcendent Analog Waveform Oscillator"](http://xaocdevices.com/main/sofia). Sofia's Daughter implements all the basic functionality (though not necessarily the exact sound) of the XAOC Eurorack hardware module, and then extends the functionality with additional controls, inputs, and outputs.
 
-The underlying principle behind the module is FOF (fonction d'onde formantique) synthesis, a method of producing formant sounds through short bursts of decaying sinusoidal waveforms. The primary output of Sofia's Daughter consists of two such decaying sinusoidal waveforms, called Ripple elements, combined with a saturated sine wave called the Fundamental. The Fundamental wave hard syncs the Ripple elements and also triggers their decay envelopes. The Ripple frequencies are measured as ratios of the Fundamenal frequency, and the Ripple decay length is proportional to the Fundamental wavelength. Sofia's Daughter extends the FOF synthesis by allowing waveforms other than sine for the Ripple elements.
+The underlying principle behind the module is FOF (fonction d'onde formantique) synthesis, a method of producing formant sounds through short bursts of decaying sinusoidal waveforms. The primary output of Sofia's Daughter consists of two such decaying sinusoidal waveforms, called Ripple elements, combined with a saturated sine wave called the Fundamental. The Fundamental wave hard syncs the Ripple elements and also triggers their decay envelopes upon the start of each Fundamental cycle. The Ripple frequencies are measured as ratios of the Fundamenal frequency, and the Ripple decay length is proportional to the Fundamental wavelength. Sofia's Daughter extends the FOF synthesis by allowing waveforms other than sine for the Ripple elements.
 
 Because the Ripple elements are always phase aligned with the Fundamental, the output can remain harmonious, regardless what frequency ratios are used for the Ripples.
 
@@ -65,6 +65,8 @@ The **1 SHOT** button controls the mode of the Fundamental oscillator. It has th
 - **Off** ***(gray, default)***: The fundamental oscillates continuously
 - **Retriggered one shot** ***(yellow)***: The fundamental produces one single wave cycle upon receiving a trigger at the Hard Sync input, then stops and waits for the next trigger. The oscillator can be retriggered to start afresh mid-cycle.
 - **Triggered one shot** ***(blue)***: Same as Retriggered one shot, except triggers received mid-cycle are ignored.
+
+Remember that the Fundamental triggers the Ripple envelopes every cycle. So if using a one shot mode, each time the Fundamental is triggered, it also triggers the Ripple envelopes.
 
 ### Fundamental Saturation
 
@@ -131,7 +133,9 @@ The **DECAY** slider sets the ratio of the envelope decay length to the Fundamen
 
 The associated bipolar Decay CV input and attenuverter knob can modulate the decay length. Both the slider and the CV respond exponentially.
 
-Note that envelopes with a ratio >1 never reach the end unless a one shot mode is used because the start of the next Fundamental cycle retriggers the Ripple envelopes. So the maximum decay ratio of 16 results in minimal damping of the Ripple element.
+Note that envelopes with a ratio >1 normally never reach the end because the start of the next Fundamental cycle retriggers the Ripple envelopes. So the maximum decay ratio of 16 results in minimal damping of the Ripple element.
+
+But if using a Fundamental one shot mode, the Ripple envelopes are triggered the same time as the Fundamental, and the envelopes always decay to completion unless another trigger is received.
 
 ### Ripple Frequency
 The Ripple frequency is always measured as a ratio of the Fundamental frequency.
