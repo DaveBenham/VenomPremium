@@ -28,6 +28,8 @@ All inputs can be driven at audio rates. Oversampling is available to mitigate d
 
 Because all inputs and outputs are polyphonic, a single instance of Sofia's Daughter can create up to 16 independent voices. The total number of channels at each output port is the maximum number of channels found across all inputs. If an input is monophonic, than the single channel is replicated to match the output channel count. If a polyphonic input has fewer channels than the outputs, then missing channels are treated as constant 0V.
 
+Polyphony also makes it possible to work with more than two Ripple elements for a single voice by applying polyphonic CV to Ripple inputs only, and using only monophonic CV for the Fundamental. There will still be multiple Fundamental waves, but they all will be running at the same rate with the same saturation. If the Fundamentals are out of phase, then simply patch a mono trigger to the Hard Sync input. The sync trigger can be removed once the Fundamentals are in phase.
+
 Check out [placeholder for link to Omri's video] for an overview of Sofia's Daughter. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
 
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
