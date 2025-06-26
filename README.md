@@ -2,13 +2,13 @@
 Documentation for Venom Premium Plugins for VCV Rack
 
 # Venom Oscillations plugin
-Thank you for your interest in / and or purchase of the Venom Oscillations plugin for VCV Rack. This plugin is intended to be a set of complex oscillator modules that produce interesting sounds that are difficult to create otherwise.
+Thank you for your interest in and/or purchase of the Venom Oscillations plugin for VCV Rack. This plugin is intended to be a set of complex oscillator modules that produce interesting sounds that are difficult to create otherwise.
 
 Currently there is only one module, Sofia's Daughter.
 
 I have tentative plans for at least one more complex oscillator. If/when a new oscillator is added, the plugin purchase price will likely increase in $5 increments. However, existing plugin owners will receive the new module for free.
 
-If you are on the fence of purchasing, you can try out a [Sofia's Daughter prototype/emulation patch](https://patchstorage.com/orb_sq-and-venom-sophia/) created using only free modules. You can experiment with some of the types of sounds Sofia's Daughter can produce. If you like it, then you can be confident Venom Oscillations sounds at least as good, is more CPU efficient, and is much more convenient to patch than the emulation/prototype patch.
+If you are on the fence of purchasing, you can try out a [Sofia's Daughter prototype/emulation patch](https://patchstorage.com/orb_sq-and-venom-sophia/) created using only free modules. You can experiment with some of the types of sounds Sofia's Daughter can produce. If you like it, then you can be confident Venom Oscillations sounds at least as good, has greater tonal range, is more CPU efficient, and is much more convenient to patch than the emulation/prototype patch.
 
 # Sofia's Daughter
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
