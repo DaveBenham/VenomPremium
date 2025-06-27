@@ -135,7 +135,7 @@ The **DECAY TRACK** button controls whether the decay length tracks CV at the Fu
 
 The **DECAY** slider sets the ratio of the envelope decay length to the Fundamental wavelength. It ranges from 0.015625 (1/64) to 16 times the Fundamental wavelength.
 
-The associated bipolar Decay CV input and attenuverter knob can modulate the decay length. Both the slider and the CV respond exponentially.
+The associated bipolar Decay CV input and attenuverter knob can modulate the decay length beyond the limits of the slider. Both the slider and the CV respond exponentially.
 
 Note that envelopes with a ratio >1 normally never reach the end because the start of the next Fundamental cycle retriggers the Ripple envelopes. So the maximum decay ratio of 16 results in minimal damping of the Ripple element.
 
@@ -148,7 +148,7 @@ The **FREQ TRACK** button controls whether the ripple frequency tracks CV at the
 
 The **FREQ** slider sets the ratio of the Ripple frequency to the Fundamental frequency. It ranges from 1 to 256 times the Fundamental frequency.
 
-The associated bipolar Frequency CV input and attenuverter knob can modulate the frequency ratio. Both the slider and CV respond exponentially. The minimum effective frequency ratio is 1.
+The associated bipolar Frequency CV input and attenuverter knob can modulate the frequency ratio. Both the slider and CV respond exponentially. CV can modulate the frequency ratio above 256, but the minimum effective frequency ratio is 1.
 
 ### Ripple Warp Modulation
 The small button above the **WARP** label controls the mode of the Warp modulation. There are a total of nine modes. In general, the Warp can either influence the Ripple frequency, the envelope decay curve, or the Ripple waveform shape. The button is color coded.
