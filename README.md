@@ -126,9 +126,9 @@ Each Ripple has five main types of control:
 ### Ripple Waveform
 
 The square **WAVE** button sets the basic waveform of the Ripple element. It has three possible values:
-- **Sine**
-- **Triangle**
-- **Square**
+- **SIN** ***(default)*** - Sine
+- **TRI** - Triangle
+- **SQR** - Square
 
 ### Ripple Envelope Decay
 The Ripple decay envelope controls how each Ripple envelope is damped. It always has an instantaneous attack, and the decay length is always measured as a ratio of the Fundamental wavelength.
