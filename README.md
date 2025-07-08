@@ -88,7 +88,7 @@ The net sum of base saturation plus attenuated CV is clamped to a value between 
 
 Frequency modulation can be applied to the Fundamental wave via the **FM** CV input, with its own dedicated attenuator.
 
-There are three FM modes controlled by the small associated **LIN** button.
+There are three FM modes controlled by the small associated **LIN** (linear) button.
 - **Off** ***(gray, default)***: Exponential FM is used. The CV is DC coupled.
 - **AC coupled** ***(yellow)***: Through zero linear FM is used. The CV is AC coupled so that CV with DC bias can still produce harmonious results. A high pass filter removes DC bias from the CV.
 - **DC coupled** ***(blue)***: Through zero linear FM is used, but this time the CV is DC coupled, preserving any DC bias.
