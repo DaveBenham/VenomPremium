@@ -78,7 +78,7 @@ Remember that the Fundamental triggers the Ripple envelopes every cycle. So if u
 
 The left small knob below the **SATURATE** label controls the base amount of saturation to apply to the sine wave. Fully counter-clockwise applies no saturation, and fully clockwise applies the maximum amount of saturation allowed. The default at noon is 50% of the maximum.
 
-The degree of saturation can be modulated by the associated bipolar CV input with its small attenuverter knob. One volt of CV at 100% represents 10% saturation.
+The degree of saturation can be additively modulated by the associated bipolar CV input with its small attenuverter knob. One volt of CV at 100% represents 10% saturation.
 
 The net sum of base saturation plus attenuated CV is clamped to a value between 0% and 100%.
 
@@ -137,7 +137,7 @@ The **DECAY TRACK** button controls whether the decay length tracks CV at the Fu
 
 The **DECAY** slider sets the ratio of the envelope decay length to the Fundamental wavelength. It ranges from 0.015625 (1/64) to 16 times the Fundamental wavelength.
 
-The associated bipolar Decay CV input and attenuverter knob can modulate the decay length beyond the limits of the slider. Both the slider and the CV respond exponentially.
+The associated bipolar Decay CV input and attenuverter knob can additively modulate the decay length beyond the limits of the slider. Both the slider and the CV respond exponentially.
 
 Note that envelopes with a ratio >1 normally never reach the end because the start of the next Fundamental cycle retriggers the Ripple envelopes. So the maximum decay ratio of 16 results in minimal damping of the Ripple element.
 
@@ -150,7 +150,7 @@ The **FREQ TRACK** button controls whether the ripple frequency tracks CV at the
 
 The **FREQ** slider sets the ratio of the Ripple frequency to the Fundamental frequency. It ranges from 1 to 256 times the Fundamental frequency.
 
-The associated bipolar Frequency CV input and attenuverter knob can modulate the frequency ratio. Both the slider and CV respond exponentially. CV can modulate the frequency ratio above 256, but the minimum effective frequency ratio is 1.
+The associated bipolar Frequency CV input and attenuverter knob can additively modulate the frequency ratio. Both the slider and CV respond exponentially. CV can modulate the frequency ratio above 256, but the minimum effective frequency ratio is 1.
 
 ### Ripple Warp Modulation
 The small button above the **WARP** label controls the mode of the Warp modulation. There are a total of nine modes. In general, the Warp can either influence the Ripple frequency, the envelope decay curve, or the Ripple waveform shape. The button is color coded.
@@ -181,7 +181,7 @@ The same colors are available to square, but they simply repeat the first four m
 
 The warp value ranges from an arbitrary -100% to 100%
 
-The **WARP** knob sets the base Warp value. The associated bipolar CV input and small attenuverter can modulate the Warp value. The sum of the knob plus attenuated CV is clamped to the range for the current mode. With the Warp knob at the default noon position, and no CV, there is no Warp effect.
+The **WARP** knob sets the base Warp value. The associated bipolar CV input and small attenuverter can additively modulate the Warp value. The sum of the knob plus attenuated CV is clamped to the range for the current mode. With the Warp knob at the default noon position, and no CV, there is no Warp effect.
 
 The traces below demonstrate the different Warp effects that are available. CCW represents full counter-clockwise Warp, and CW represents full clockwise Warp. Each trace uses a decay ratio of 1 and a frequency ratio of 15.
 
