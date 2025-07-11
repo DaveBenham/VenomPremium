@@ -34,7 +34,7 @@ Because all inputs and outputs are polyphonic, a single instance of Sofia's Daug
 
 Polyphony also makes it possible to work with more than two Ripple elements for a single voice by applying polyphonic CV to Ripple inputs only, and using only monophonic CV for the Fundamental. There will still be multiple Fundamental waves, but they all will be running at the same rate with the same saturation. If the Fundamentals are out of phase, then simply patch a mono trigger to the Hard Sync input. The sync trigger can be removed once the Fundamentals are in phase.
 
-Check out [placeholder for link to Omri's video] for an overview of Sofia's Daughter. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
+Be sure to watch [Omri Cohen's overview of Sofia's Daughter](https://www.youtube.com/watch?v=yUtYXnmDmvg) that provides many ideas on techniques to explore. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may also provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
 
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
 
