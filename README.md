@@ -13,10 +13,10 @@ I have tentative plans for at least one more complex oscillator. If/when a new o
 If you are on the fence of purchasing, you can try out a [Sofia's Daughter prototype/emulation patch](https://patchstorage.com/orb_sq-and-venom-sophia/) created using only free modules. You can experiment with some of the types of sounds Sofia's Daughter can produce. If you like it, then you can be confident Venom Oscillations sounds at least as good, has greater tonal range, is more CPU efficient, and is much more convenient to patch than the emulation/prototype patch.
 
 # Sofia's Daughter
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
 
 ![Sofia's Daughter module image](doc/SofiasDaughter.png)  
-Sofia's Daughter is a complex polyphonic formant oscillator inspired by the wonderful [XAOC Devices Sofia "1955 Transcendent Analog Waveform Oscillator"](http://xaocdevices.com/main/sofia). Sofia's Daughter implements all the basic functionality (though not necessarily the exact sound) of the XAOC Eurorack hardware module, and then extends the functionality with additional controls, inputs, and outputs.
+Sofia's Daughter is a complex polyphonic formant oscillator inspired by the wonderful [XAOC Devices Sofia "1955 Transcendent Analog Waveform Oscillator"](http://xaocdevices.com/main/sofia). Sofia's Daughter implements all the basic functionality (though not necessarily the exact sound) of the XAOC Eurorack hardware module, and then extends the functionality with additional controls, inputs, and outputs. A [complete list of known differences](#differences-from-xaoc-devices-sofia) is listed at the end of this documentation.
 
 The underlying principle behind the module is FOF (fonction d'onde formantique) synthesis, a method of producing formant sounds through short bursts of decaying sinusoidal waveforms. The primary output of Sofia's Daughter consists of two such decaying sinusoidal waveforms, called Ripple elements, combined with a saturated sine wave called the Fundamental. Sofia's Daughter extends the FOF synthesis by allowing waveforms other than sine for the Ripple elements.
 
@@ -36,7 +36,7 @@ Polyphony also makes it possible to work with more than two Ripple elements for 
 
 Be sure to watch [Omri Cohen's overview of Sofia's Daughter](https://www.youtube.com/watch?v=yUtYXnmDmvg) that provides many ideas on techniques to explore. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may also provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
 
 ## Sofia's Daughter Layout
 Sofia's Daughter can be divided into 5 distinct sections, each with its own purpose
@@ -109,7 +109,7 @@ The **SOFT SYNC** CV input reverses the direction of the fundamental wave upon r
 
 Both sync inputs use Schmitt triggers that are triggered at 2V and reset at 0.2V so they can be used with both unipolar and bipolar inputs.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
 
 ## Ripple Sections
 ![Ripple sections image](doc/RippleSections.png)  
@@ -191,7 +191,7 @@ The traces below demonstrate the different Warp effects that are available. CCW 
 
 Phase modulation can be applied to the Ripple wave via the **PM** CV input, with its own dedicated attenuator.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
 
 ## Global Section
 ![Global section image](doc/GlobalSection.png)  
@@ -244,7 +244,7 @@ Once polyphony is introduced at any one of the CV inputs, all outputs become pol
 
 The **RESET POLY** button can be used to temporarily force all outputs to monophonic so that upon release, the outputs will revert back to the maximum number of channels found across all external CV inputs.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
 
 ## Output Section
 ![Output section image](doc/OutputsSection.png)  
@@ -312,5 +312,60 @@ If you want the default theme to disregard the VCV Rack dark panel setting, then
 
 The factory default theme is ivory, and the factory default dark theme is coal.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
 
+## Differences from XAOC Devices Sofia
+
+Here is a summary of the major known differences between XAOC Devices Sofia and Venom Sofia's Daughter.
+
+### Inconsequential name changes (Sofia name -> Sofia's Daughter name)
+
+**Controls and CV**
+- Global FM -> Fundamental FM
+- Pitch FM -> Global FM
+- Elements Mix -> Ripple Mix
+- Fund-Elem Mix -> Elems Mix
+- Damp A / B -> A / B Decay (Decay time ratio)
+- Ratio A / B -> A / B Freq (Frequency ratio)
+
+**Outputs**
+- Impulse A / B -> A / B Env (envelope)
+- A / B Out -> A / B Raw
+
+### Main disadvantage of Sofia's Daughter
+-  The digital implementation limits frequency, and can also lead to aliasing. But oversampling options are available to mitigate aliasing
+
+### Global Sofia's Daughter Enhancements
+- Polyphony! All inputs and outputs are polyphonic
+- Added attenuators or attenuverters for all CV inputs (except for V/Oct and sync inputs)
+- Options for global linear through zero FM in addition to exponential FM (actually called pitched FM on Sofia)
+
+### Fundamental Sine VCO enhancements
+- User control of sine saturation level, including CV input
+- Hard Sync
+- Soft Sync
+- One shot modes triggered by Hard Sync - great for percussion voices
+- Phase Modulation (frequently called through-zero linear frequency modulation)
+- Options for fundamental linear through zero FM in addition to exponential FM (actually called global FM on Sofia)
+
+### Ripple Element VCO enhancements
+- Additional triangle option to go along with sine and square
+- Phase Modulation
+- Multiple Warp modes available to all wave forms
+  - Frequency ramp (the default mode that matches the XAOC hardware)
+  - Inverse frequency ramp
+  - J curve envelope decay shape
+  - S curve envelope decay shape
+  - Ripple PWM (even for sine and triangle!)
+- Additional Ripple shaping Warp modes available to sine and triangle only
+  - Ripple skew
+  - Ripple J-curve
+  - Ripple S-curve
+  - Ripple rectify
+
+### Additional Outputs
+- Saturated fundamental sine
+- Damped Ripple A
+- Damped Ripple B
+
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
