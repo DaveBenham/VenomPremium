@@ -369,3 +369,37 @@ Here is a summary of the major known differences between XAOC Devices Sofia and 
 - Damped Ripple B
 
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+
+# Spice Factory
+
+Spice Factory is a complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html).
+
+The core concepts are two primary unipolar sound source oscillators called Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts), a third bipolar Slice oscillator that "cuts" and preserves the Positive Spice while positive, and the Negative Spice while Negative, and a mixer called Splice that merges the modified Positive and Negative Spices into a final waveform. There are many controls and CV inputs to specify the waveform(s) of each oscillator, phase modulation, frequency modulation, pulse width modulation, and many VCAs for mixing and amplitude modulation.
+
+## SLICE section
+
+The Slice oscillator produces 4 different waveforms simultaneously: Sine, Triangle, Square (pulse), and Saw (descending ramp). All four waveforms are available as independent outputs to be used however you see fit. But the primary purpose of this oscillator is to slice (amplitude modulate) the Spice oscillators.
+
+### WAVE square button
+This button selects which waveform is used to slice the Spice waveforms.
+
+### FREQ (frequency) knob
+Specifies the base frequency of the Slice oscillator. The knob has an 8 octave range. The absolute values of the range depend on the settings of the OCT (octave) knob and SLOW button. With the Octave at 0 and the Slow option off, the knob ranges from 16.352 to 4186 Hz, with the default noon position at C4 (261.63 Hz). With the Octave at 0 and the Slow option enabled, the knob ranges from 0.125 to 32 Hz, with the default noon position at 2 Hz.
+
+### OCT (octave) knob
+Adjusts the range of the Slice Frequency knob in one octave increments. The Octave knob ranges from -2 to 2, with the default noon position at 0.
+
+### SLOW (frequency mode) button
+When disabled (default), the Slice Frequency knob range is in audio mode. When enabled, the Frequency knob range is in LFO (low frequency) mode. Oversampling is automatically disabled when the Slow mode is enabled. By default the Oversampling is set to 4x whenever the frequency mode is changed to audio rate (Slow disabled). The oversample rate can then be manually set to any value after the frequency mode change. The default audio mode oversample rate can be adjusted by a context menu option.
+
+### PW (pulse width) knob
+This knob always controls the positive width of the selected Slice waveform, whether it be Sine, Triangle, Square, or Saw. It also always controls the pulse width of the square form, even if it is not selected.
+
+The knob ranges from 0% to 100%, with the default noon value of 50%. At 0% the square output is constant -5V, and at 100% the square output is constant +5V.
+
+The positive portion of the waveform is stretched or shrunk to fit within the selected width. The negative portion is stretched or shrunk in the oposite direction so that the overal wavelength remains constant.
+
+### PWM (puse width modulation) attenuverter knob and CV input
+Provides CV control over the pulse width setting. The CV is scaled at 10% per volt. The CV is attenuated and or inverted by the associated attnuverter knob. The attenuated CV is summed with the PW setting, and the final effective pulse width is clamped to a value from 0 to 100%.
+
+### EXP FM (exponential frequency modulation) input and attenuverter
