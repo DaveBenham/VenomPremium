@@ -393,13 +393,13 @@ Adjusts the range of the Slice Frequency knob in one octave increments. The Octa
 When disabled (default), the Slice Frequency knob range is in audio mode. When enabled, the Frequency knob range is in LFO (low frequency) mode. Oversampling is automatically disabled when the Slow mode is enabled. By default the Oversampling is set to 4x whenever the frequency mode is changed to audio rate (Slow disabled). The oversample rate can then be manually set to any value after the frequency mode change. The default audio mode oversample rate can be adjusted by a context menu option.
 
 ### PW (pulse width) knob
-This knob always controls the positive width of the selected Slice waveform, whether it be Sine, Triangle, Square, or Saw. It also always controls the pulse width of the square form, even if it is not selected.
+This knob always controls the positive width of the selected Slice waveform, whether it be Sine, Triangle, Square, or Saw. It also controls the pulse width of the square waveform, even if it is not selected.
 
-The knob ranges from 0% to 100%, with the default noon value of 50%. At 0% the square output is constant -5V, and at 100% the square output is constant +5V.
+The knob ranges from 0% to 100%, with the default noon value of 50%. The positive portion of the waveform is stretched or shrunk to fit within the selected width. The negative portion is stretched or shrunk in the oposite direction so that the overall wavelength remains constant.
 
-The positive portion of the waveform is stretched or shrunk to fit within the selected width. The negative portion is stretched or shrunk in the oposite direction so that the overal wavelength remains constant.
+![Pulse Width Examples image](doc/PWexamples.png)
 
-### PWM (puse width modulation) attenuverter knob and CV input
-Provides CV control over the pulse width setting. The CV is scaled at 10% per volt. The CV is attenuated and or inverted by the associated attnuverter knob. The attenuated CV is summed with the PW setting, and the final effective pulse width is clamped to a value from 0 to 100%.
+### PWM (pulse width modulation) attenuverter knob and CV input
+Provides CV control over the pulse width setting. The CV is scaled at 10% per volt. The CV is attenuated and or inverted by the associated attenuverter knob. The attenuated CV is summed with the PW setting, and the final effective pulse width is clamped to a value from 0 to 100%.
 
 ### EXP FM (exponential frequency modulation) input and attenuverter
