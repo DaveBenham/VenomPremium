@@ -415,9 +415,21 @@ Provides CV control over the pulse width setting. The CV is scaled at 10% per vo
 ### SPICE SKEW button
 When enabled, the Spice Skew button causes the Slice pulse width setting to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
 
-The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. Note how the wavelengths of the Positive Spice component increase as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%. If this diagram does not make sense, then revisit after you have read the Spice and Splice documentation.
+The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. The upper portion of the yellow Splice mix is from the Positive Spice mix, and the bottom portion is from the Negative Spice mix. Note how the wavelengths of the Positive Spice component increase as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%. If this diagram does not make sense, then revisit after you have read the Spice and Splice documentation.
 
 ![Spice Skew Examples image](doc/PWskew.png)
 
 ### EXP FM (exponential frequency modulation) input and attenuverter
 The Slice exponential frequency modulation input is scaled at 1 V/Oct, and it can be attenuated and/or inverted by the attenuverter.
+
+### LIN FM (through zero linear frequency modulation) input and attenuverter
+By default the Slice linear frequency modulation is AC coupled, meaning that low frequency content is blocked by a high pass filter. If you need to use low frequency linear FM, then activate the small **DC** button. The button will turn blue, and the linear FM input is then DC coupled.
+
+### SYNC (hard sync) input
+The rising edge of a trigger or gate at the Slice Sync input resets the Slice oscillator phase to 0. The sync uses a Schmitt trigger that goes high when the input rises above 2 volts and goes low when the input falls below 0.2 volts.
+
+### SQR (square), SIN (sine), TRI (triangle), and SAW (descending ramp) outputs
+Each of the Slice waveforms are available at these outputs. All slice waveforms are bipolar 10 volts peak to peak (-5V to 5V).
+
+## POSITIVE and NEGATIVE SPICE sections
+
