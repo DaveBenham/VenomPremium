@@ -400,7 +400,7 @@ The Slice V/Oct input is summed with the Freq and Oct values to determine the ef
 By default the Slice V/Oct input only modulates the Slice frequency. If the Spice Track button is enabled, then the Slice V/Oct input is also applied to the Spice frequencies.
 
 ### SPICE SYNC button
-When enabled, the Spice Sync button causes the Slice saw to hard sync the Spice waveforms. Positive Spice waveforms are synced on the leading edge of the Slice square wave, and Negative Spice waveforms are synced on the falling edge of the Slice square wave.
+When enabled, the Spice Sync button causes the Slice square to hard sync the Spice waveforms. Positive Spice waveforms are synced on the rising edge of the Slice square wave, and Negative Spice waveforms are synced on the falling edge of the Slice square wave.
 
 ### PW (pulse width) knob
 This knob always controls the positive width of the selected Slice waveform, whether it be Sine, Triangle, Square, or Saw. It also controls the pulse width of the square waveform, even if it is not selected.
