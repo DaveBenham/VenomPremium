@@ -517,6 +517,24 @@ In the waveform trace below the Slice frequency is higher than both Spice oscill
 
 The examples above each use a single waveform for the Positive and Negative Spice mixes. But multiple waveforms can be blended and the mixed results appear at the Positive/Negative Spice Mix outputs.
 
+### FM (Positive/Negative Spice frequency modulation) inputs and attenuverter knobs
+The FM inputs are attenuated and/or inverted by the associated attenuverter knobs, and they can modulate the Positive and Negative Spice oscillator frequencies at audio rates.
+
+### LIN (Positive/Negative Spice FM mode) buttons
+The LIN buttons control the type of FM applied to the Spice oscillators. There are three possible values:
+- **Off** - DC coupled exponential frequency modulation
+- **Yellow** - AC coupled through-zero linear frequency modulation
+- **Blue** - DC coupled through-zero linear frequency modulation
+
+### PW Skew Spice frequency modulation
+
+### PHASE (Positive/Negative Spice waveform phase) knobs, inputs, and attenuverters
+The phase of each Spice waveform can be adjusted via the Phase knobs. The phase knobs range from -180 to 180 degrees, with the default noon value of 0 degrees.
+
+The associated CV inputs are scaled at 90 degrees per volt, and are attenuated and/or inverted by the associated attenuverters. The attenuated CV is summed with the knob value to get the effective phase.
+
+Spice waveform phases can be modulated at audio rates.
+
 ## SPLICE mixer section
 ![Splice mixer section image](doc/SpliceSection.png)  
 
