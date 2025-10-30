@@ -371,10 +371,11 @@ Here is a summary of the major known differences between XAOC Devices Sofia and 
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
 
 # Spice Factory
+![Spice Factory module image](doc/SpiceFactory.png)  
 
-Spice Factory is a complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html).
+Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html).
 
-The core concepts are two primary unipolar sound source oscillators called Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts), a third bipolar Slice oscillator that "cuts" and preserves the Positive Spice while positive, and the Negative Spice while Negative, and a mixer called Splice that merges the modified Positive and Negative Spices into a final waveform. There are many controls and CV inputs to specify the waveform(s) of each oscillator, phase modulation, frequency modulation, pulse width modulation, and many VCAs for mixing and amplitude modulation.
+The core concepts are two primary unipolar sound source oscillators called Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts), a third bipolar Slice oscillator that "cuts" the Spice waveforms into pieces, and a mixer called Splice that merges the Spice pieces into a final waveform. There are many controls and CV inputs to modulate the waveform, phase modulation, frequency modulation, pulse width modulation, and many VCAs for mixing and amplitude modulation, and more. Plus there are twelve different outputs providing lots of opportunity for feedback patching.
 
 ## SLICE section
 
@@ -392,6 +393,15 @@ Adjusts the range of the Slice Frequency knob in one octave increments. The Octa
 ### SLOW (frequency mode) button
 When disabled (default), the Slice Frequency knob range is in audio mode. When enabled, the Frequency knob range is in LFO (low frequency) mode. Oversampling is automatically disabled when the Slow mode is enabled. By default the Oversampling is set to 4x whenever the frequency mode is changed to audio rate (Slow disabled). The oversample rate can then be manually set to any value after the frequency mode change. The default audio mode oversample rate can be adjusted by a context menu option.
 
+### V/OCT input
+The Slice V/Oct input is summed with the Freq and Oct values to determine the effective Slice frequency.
+
+### SPICE TRACK button
+By default the Slice V/Oct input only modulates the Slice frequency. If the Spice Track button is enabled, then the Slice V/Oct input is also applied to the Spice frequencies.
+
+### SPICE SYNC button
+When enabled, the Spice Sync button causes the Slice square to hard sync the Spice waveforms. Positive Spice waveforms are synced on the rising edge of the Slice square wave, and Negative Spice waveforms are synced on the falling edge of the Slice square wave.
+
 ### PW (pulse width) knob
 This knob always controls the positive width of the selected Slice waveform, whether it be Sine, Triangle, Square, or Saw. It also controls the pulse width of the square waveform, even if it is not selected.
 
@@ -402,4 +412,24 @@ The knob ranges from 0% to 100%, with the default noon value of 50%. The positiv
 ### PWM (pulse width modulation) attenuverter knob and CV input
 Provides CV control over the pulse width setting. The CV is scaled at 10% per volt. The CV is attenuated and or inverted by the associated attenuverter knob. The attenuated CV is summed with the PW setting, and the final effective pulse width is clamped to a value from 0 to 100%.
 
+### SPICE SKEW button
+When enabled, the Spice Skew button causes the Slice pulse width setting to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
+
+The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. The upper portion of the yellow Splice mix is from the Positive Spice mix, and the bottom portion is from the Negative Spice mix. Note how the wavelengths of the Positive Spice component increase as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%. If this diagram does not make sense, then revisit after you have read the Spice and Splice documentation.
+
+![Spice Skew Examples image](doc/PWskew.png)
+
 ### EXP FM (exponential frequency modulation) input and attenuverter
+The Slice exponential frequency modulation input is scaled at 1 V/Oct, and it can be attenuated and/or inverted by the attenuverter.
+
+### LIN FM (through zero linear frequency modulation) input and attenuverter
+By default the Slice linear frequency modulation is AC coupled, meaning that low frequency content is blocked by a high pass filter. If you need to use low frequency linear FM, then activate the small **DC** button. The button will turn blue, and the linear FM input is then DC coupled.
+
+### SYNC (hard sync) input
+The rising edge of a trigger or gate at the Slice Sync input resets the Slice oscillator phase to 0. The sync uses a Schmitt trigger that goes high when the input rises above 2 volts and goes low when the input falls below 0.2 volts.
+
+### SQR (square), SIN (sine), TRI (triangle), and SAW (descending ramp) outputs
+Each of the Slice waveforms are available at these outputs. All slice waveforms are bipolar 10 volts peak to peak (-5V to 5V).
+
+## POSITIVE and NEGATIVE SPICE sections
+
