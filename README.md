@@ -499,7 +499,7 @@ The Positive and Negative Spice oscillators each have a set of mix controls for 
 
 The Positive Spice waveforms are switched on when the Slice oscillator is high, and off when Slice is low. The Negative Spice waveforms are switched on when the Slice oscillator is low, and off when Slice is high. The switching is achieved via amplitude modulation. The half rectified positive portion of the Slice waveform amplitude modulates the Positive Spice waveforms. The half rectified negative portion of the Slice waveform is inverted and then amplitude modulates the Negative Spice waveforms.
 
-The Level controls range from 0% to 100%. At 0% the waveform is completely off. Between 0% and 50% the waveform is fully switched, with the amplitude smoothly increasing until the maximum 5V peak to peak level is reached at 50%. At 100% the waveform is at maximum amplitude but without switching. Between 50% and 100% the signal cross fades between the fully switched maximum amplitude and the unswitched maximum amplitude.
+The Level controls range from 0% to 100%. At 0% the waveform is completely off. Between 0% and 50% the waveform is fully switched, with the amplitude smoothly increasing until the maximum 5V peak to peak level is reached at 50%. At 100% the waveform is at maximum amplitude but without switching. Between 50% and 100% the signal sort of cross fades between the fully switched maximum amplitude and the unswitched maximum amplitude. In actuality the unswitched waveform is attenuated between 0% and 100%, and the maximum of the maximum switched signal and the attenuated unswitched signal is used.
 
 ![Spice Mix Level Control image](doc/SpiceLevelControl.png)
 
