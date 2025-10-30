@@ -373,9 +373,43 @@ Here is a summary of the major known differences between XAOC Devices Sofia and 
 # Spice Factory
 ![Spice Factory module image](doc/SpiceFactory.png)  
 
-Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html).
+Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html). Spice Factory attempts to replicate the features of the FSS OSC2, and then adds many additional features.
 
-The core concepts are two primary unipolar sound source oscillators called Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts), a third bipolar Slice oscillator that "cuts" the Spice waveforms into pieces, and a mixer called Splice that merges the Spice pieces into a final waveform. There are many controls and CV inputs to modulate the waveform, phase modulation, frequency modulation, pulse width modulation, and many VCAs for mixing and amplitude modulation, and more. Plus there are twelve different outputs providing lots of opportunity for feedback patching.
+The two primary unipolar sound sources are Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts). A third bipolar Slice oscillator is used as an amplitude modulator to cut the Spice waveforms into pieces. The Positive Spice is preserved during the positive portion of the Slice, and the Negative Spice is preserved during the negative portion of the Slice. The modulated Spice pieces are then merged into a cohesive complex bipolar waveform by the Splice mixer. This briefly describes the wave splicing capabilities of Spice Factory. But there are many controls and CV inputs to perform all manner of modulation throughout the entire process:
+ - Pulse width modulation
+ - Exponential frequency modulation
+ - Linear through-zero frequency modulation
+ - Spice frequency skewing that is controlled by the Slice pulse width
+ - Hard sync (phase reset)
+ - Phase modulation
+ - An external input that can be mixed with the spliced waveform
+ - Many VCAs for mixing and amplitude modulation
+
+All inputs can be modulated at audio rates. The module can also be put into an LFO mode for creation of interesting low frequency modulation shapes.
+
+There are a total of twelve outputs available for use as audio or CV throughout your patch, providing many opportunities for feedback modulation.
+
+Since Spice Factory emulates the FSS OSC2 feature set as a starting point, the techniques demonstrated in the [DivKid video on the FSS OSC2](https://www.youtube.com/watch?v=Vy23uZSsdLY) can be applied to Spice Factory as well. Just remember that many of the OSC2 concepts have been renamed in Spice Factory. Of course many more techniques are available with the additional controls unique to the Spice Factory.
+
+### Anti-aliasing and the OVER SAMPLE button
+Spice Factory is a purely digital implementation with many non-linear processes that can lead to high frequency outputs. High frequency content that is above the Nyquist frequency (1/2 the VCV sample rate) is reflected down and perceived as inharmonic audio aliasing. The aliasing is usually not desired, so Spice Factory offers oversampling options to mitigate aliasing.
+
+The square OverSample button in the upper left corner provides the following options
+- Off
+- 2x
+- 4x
+- 8x
+- 16x
+- 32x
+
+Inputs are upsampled to the oversample rate using interpolation. All computations are performed at the higher overample rate. At the end a low pass filter is used to remove high frequency content that would otherwise be aliased, and then the result is downsampled back to the VCV sample rate at the outputs. Note that oversampling cannot remove aliasing that already exists within inputs.
+
+Oversampling is computationally expensive, so it is best to use the lowest level of oversampling that provides acceptable results. Typically 4x or 8x provide good audio results when the VCV sample rate is 44 or 48 kHz, but lower levels may be acceptable. Oversampling is not needed for low frequency outputs.
+
+### Polyphony and the RESET POLY button
+Spice Factory is fully polyphonic. The number of channels for all outputs is determined by the maximum channel count found across all inputs. Monophonic inputs are replicated to match the output channel count. Polyphonic inputs with fewer channels assume constant 0 volts for the missing channels.
+
+If you have a Spice Factory patch that uses feedback, then when you remove the external polyphonic input, the outputs will continue to be polyphonic due to the feedback. In this case you can press the Reset Poly button to temporarily force all outputs to be monophonic. When you release the button the feedback will still be monophonic, so the outputs will remain monophonic.
 
 ## SLICE oscillator section
 ![Slice oscillator section image](doc/SliceSection.png)  
@@ -414,9 +448,9 @@ The knob ranges from 0% to 100%, with the default noon value of 50%. The positiv
 Provides CV control over the pulse width setting. The CV is scaled at 10% per volt. The CV is attenuated and or inverted by the associated attenuverter knob. The attenuated CV is summed with the PW setting, and the final effective pulse width is clamped to a value from 0 to 100%.
 
 ### SPICE SKEW button
-When enabled, the Spice Skew button causes the Slice pulse width setting to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
+When enabled, the Spice Skew button causes the Slice pulse width to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
 
-The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. The upper portion of the yellow Splice mix is from the Positive Spice mix, and the bottom portion is from the Negative Spice mix. Note how the wavelengths of the Positive Spice component increase as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%. If this diagram does not make sense, then revisit after you have read the Spice and Splice documentation.
+The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. The upper portion of the yellow Splice mix is from the Positive Spice mix, and the bottom portion is from the Negative Spice mix. Note how the wavelengths of the Positive Spice component increase proportionally as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%. If this diagram does not make sense, then revisit after you have read the Spice and Splice documentation.
 
 ![Spice Skew Examples image](doc/PWskew.png)
 
@@ -434,6 +468,20 @@ Each of the Slice waveforms are available at these outputs. All slice waveforms 
 
 ## POSITIVE and NEGATIVE SPICE oscillator sections
 ![Spice oscillator sections image](doc/SpiceSections.png)  
+The controls, inputs, and outputs are identical for the Positive and Negative Spice oscillators.
+
+The Positive and Negative spice oscillators each produce three different unipolar waveforms simultaneously
+- **SIN** - Actually a fully rectified sine so the frequency is effectively double the rate of the other spice waveforms
+- **TRI** - Triangle
+- **SAW** - A descending ramp waveform
+
+The Positive Spice waveforms range from 0 to 5 volts, and the Negative Spice waveforms range from -5 to 0 volts.
+
+There are raw outputs for each of the Spice waveforms.
+
+The diagram below demonstrates the waveform shapes, phase relationships, and sync behavior of all six raw Spice waveforms. The Positive and Negative oscillators are at the same frequency, and Spice Skew is enabled. Note how the Positive Spice is synced at the rising edge of the Slice square wave, and the Negative Spice is synced at the falling edge of the Slice square wave.
+
+![Raw Spice waveforms image](doc/RawSpicePhaseSyncBehavior.png)
 
 ## SPLICE mixer section
 ![Splice mixer section image](doc/SpliceSection.png)  
