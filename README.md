@@ -414,7 +414,7 @@ If you have a Spice Factory patch that uses feedback, then when you remove the e
 ## SLICE oscillator section
 ![Slice oscillator section image](doc/SliceSection.png)  
 
-The Slice oscillator produces 4 different waveforms simultaneously: Sine, Triangle, Square (pulse), and Saw (descending ramp). All four waveforms are available as independent outputs to be used however you see fit. But the primary purpose of this oscillator is to slice (amplitude modulate) the Spice oscillators.
+The Slice oscillator produces 4 different waveforms simultaneously: Sine, Triangle, Square (pulse), and Saw (descending ramp). All four waveforms are available as independent outputs to be used however you see fit. But the primary purpose of this oscillator is to slice (amplitude modulate, or switch on and off) the Spice oscillators.
 
 ### WAVE square button
 This button selects which waveform is used to slice the Spice waveforms.
@@ -482,6 +482,40 @@ There are raw outputs for each of the Spice waveforms.
 The diagram below demonstrates the waveform shapes, phase relationships, and sync behavior of all six raw Spice waveforms. The Positive and Negative oscillators are at the same frequency, and Spice Skew is enabled. Note how the Positive Spice is synced at the rising edge of the Slice square wave, and the Negative Spice is synced at the falling edge of the Slice square wave.
 
 ![Raw Spice waveforms image](doc/RawSpicePhaseSyncBehavior.png)
+
+### FREQ (Positive/Negative spice frequency) knob
+The Freq control determines the base frequency of the Positive or Negative Spice oscillator. The knob has an 8 octave range. The absolute values of the range depend on the settings of the Spice Oct (octave) knob and Slice Slow button (from the Slice Oscillator section). With the Octave at 0 and the Slow option off, the knob ranges from 16.352 to 4186 Hz, with the default noon position at C4 (261.63 Hz). With the Octave at 0 and the Slow option enabled, the knob ranges from 0.125 to 32 Hz, with the default noon position at 2 Hz.
+
+### OCT (Positive/Negative Spice octave) knob
+Adjusts the range of the Positive or Negative Spice Frequency knob in one octave increments. The Octave knob ranges from -2 to 2, with the default noon position at 0.
+
+### V/OCT (Positive/Negative Spice volt/octave) input
+The Spice V/Oct input is summed with the Freq and Oct values to determine the effective Spice frequency.
+
+If the Spice Track button is enabled in the Slice Oscillator section, then the Slice V/Oct input also contributes to the Spice frequency.
+
+### LEVEL (Positive/Negative waveform mix level) knobs, inputs, and attenuverters
+The Positive and Negative Spice oscillators each have a set of mix controls for the sine, triangle, and saw waveforms. The controls determine both how much of each waveform is included in the Positive or Negative Spice Mix, and to what degree the waveforms are switched on and off by the Slice oscillator.
+
+The Positive Spice waveforms are switched on when the Slice oscillator is high, and off when Slice is low. The Negative Spice waveforms are switched on when the Slice oscillator is low, and off when Slice is high. The switching is achieved via amplitude modulation. The half rectified positive portion of the Slice waveform amplitude modulates the Positive Spice waveforms. The half rectified negative portion of the Slice waveform is inverted and then amplitude modulates the Negative Spice waveforms.
+
+The Level controls range from 0% to 100%. At 0% the waveform is completely off. Between 0% and 50% the waveform is fully switched, with the amplitude smoothly increasing until the maximum 5V peak to peak level is reached at 50%. At 100% the waveform is at maximum amplitude but without switching. Between 50% and 100% the signal cross fades between the fully switched maximum amplitude and the unswitched maximum amplitude.
+
+![Spice Mix Level Control image](doc/SpiceLevelControl.png)
+
+The Spice Mix Level CV inputs are scaled at 10% per volt, and attenuated and/or inverted by the associated small attenuverter knob. The attenuated CV is then summed with the Spice Mix Level knob value and the result is clamped to a value between 0% and 100%.
+
+The effect of the Slice switching depends on whether the Slice oscillator frequency is lower or higher than the Spice oscillators.
+
+In the waveform trace below the Slice frequency is lower than both Spice oscillators, and the Spice Sync from the Slice oscillator section is On.
+
+![Spice Level Examples image](doc/SpiceLevelExamples.png)
+
+In the waveform trace below the Slice frequency is higher than both Spice oscillators, and the Spice Sync from the Slice oscillator section is off. The Spice Sync option is typically not useful when the Slice frequency is higher than the Spice.
+
+![Spice Level Examples 2 image](doc/SpiceLevelExamples2.png)
+
+The examples above each use a single waveform for the Positive and Negative Spice mixes. But multiple waveforms can be blended and the mixed results appear at the Positive/Negative Spice Mix outputs.
 
 ## SPLICE mixer section
 ![Splice mixer section image](doc/SpliceSection.png)  
