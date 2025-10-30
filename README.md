@@ -377,7 +377,8 @@ Spice Factory is a polyphonic complex wave splicing triple oscillator heavily in
 
 The core concepts are two primary unipolar sound source oscillators called Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts), a third bipolar Slice oscillator that "cuts" the Spice waveforms into pieces, and a mixer called Splice that merges the Spice pieces into a final waveform. There are many controls and CV inputs to modulate the waveform, phase modulation, frequency modulation, pulse width modulation, and many VCAs for mixing and amplitude modulation, and more. Plus there are twelve different outputs providing lots of opportunity for feedback patching.
 
-## SLICE section
+## SLICE oscillator section
+![Slice oscillator section image](doc/SliceSection.png)  
 
 The Slice oscillator produces 4 different waveforms simultaneously: Sine, Triangle, Square (pulse), and Saw (descending ramp). All four waveforms are available as independent outputs to be used however you see fit. But the primary purpose of this oscillator is to slice (amplitude modulate) the Spice oscillators.
 
@@ -431,5 +432,9 @@ The rising edge of a trigger or gate at the Slice Sync input resets the Slice os
 ### SQR (square), SIN (sine), TRI (triangle), and SAW (descending ramp) outputs
 Each of the Slice waveforms are available at these outputs. All slice waveforms are bipolar 10 volts peak to peak (-5V to 5V).
 
-## POSITIVE and NEGATIVE SPICE sections
+## POSITIVE and NEGATIVE SPICE oscillator sections
+![Spice oscillator sections image](doc/SpiceSections.png)  
+
+## SPLICE mixer section
+![Splice mixer section image](doc/SpliceSection.png)  
 
