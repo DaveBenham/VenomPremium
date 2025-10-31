@@ -387,7 +387,7 @@ The two primary unipolar sound sources are Positive Spice (0 to 5 volts), and Ne
 
 All inputs can be modulated at audio rates. The module can also be put into an LFO mode for creation of interesting low frequency modulation shapes.
 
-There are a total of twelve outputs available for use as audio or CV throughout your patch, providing many opportunities for feedback modulation.
+There are a total of thirteen outputs available for use as audio or CV throughout your patch, providing many opportunities for feedback modulation.
 
 Since Spice Factory emulates the FSS OSC2 feature set as a starting point, the techniques demonstrated in the [DivKid video on the FSS OSC2](https://www.youtube.com/watch?v=Vy23uZSsdLY) can be applied to Spice Factory as well. Just remember that many of the OSC2 concepts have been renamed in Spice Factory. Of course many more techniques are available with the additional controls unique to the Spice Factory.
 
@@ -587,6 +587,7 @@ Here is a summary of the major known differences between the Future Sound System
 - Sync Lock has been renamed Spice Sync
 - Spice Factory is fully polyphonic
 - Since Spice Factory is a digital implementation, it has upper frequency limits, and is subject to aliasing. But oversampling is available to mitigate aliasing.
+- A sine waveform was added to the Slice oscillator
 - Any of the Slice oscillator waveforms can be used to slice the Spice waveforms via amplitude modulation, not just the square waveform
 - Pulse width modulation can be applied to the Slice sine, triangle, and saw waveforms, not just the square waveform
 - All VCV knobs have a fine control mechanism, so the Slice and Spice sections have Frequency and Octave knobs instead of Course and Fine frequency controls
