@@ -448,11 +448,7 @@ The knob ranges from 0% to 100%, with the default noon value of 50%. The positiv
 Provides CV control over the pulse width setting. The CV is scaled at 10% per volt. The CV is attenuated and or inverted by the associated attenuverter knob. The attenuated CV is summed with the PW setting, and the final effective pulse width is clamped to a value from 0 to 100%.
 
 ### SPICE SKEW button
-When enabled, the Spice Skew button causes the Slice pulse width to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
-
-The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. The upper portion of the yellow Splice mix is from the Positive Spice mix, and the bottom portion is from the Negative Spice mix. Note how the wavelengths of the Positive Spice component increase proportionally as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%. If this diagram does not make sense, then revisit after you have read the Spice and Splice documentation.
-
-![Spice Skew Examples image](doc/PWskew.png)
+When enabled, the Spice Skew button causes the Slice pulse width to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. See PW Skew in the Spice oscillators section for more information.
 
 ### EXP FM (exponential frequency modulation) input and attenuverter
 The Slice exponential frequency modulation input is scaled at 1 V/Oct, and it can be attenuated and/or inverted by the attenuverter.
@@ -527,6 +523,11 @@ The LIN buttons control the type of FM applied to the Spice oscillators. There a
 - **Blue** - DC coupled through-zero linear frequency modulation
 
 ### PW Skew Spice frequency modulation
+If the Spice Skew button is on in the Slice Oscillator section, then the Slice pulse width modulates the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
+
+The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. The upper portion of the yellow Splice mix is from the Positive Spice mix, and the bottom portion is from the Negative Spice mix. Note how the wavelengths of the Positive Spice component increase proportionally as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%.
+
+![Spice Skew Examples image](doc/PWskew.png)
 
 ### PHASE (Positive/Negative Spice waveform phase) knobs, inputs, and attenuverters
 The phase of each Spice waveform can be adjusted via the Phase knobs. The phase knobs range from -180 to 180 degrees, with the default noon value of 0 degrees.
@@ -535,6 +536,59 @@ The associated CV inputs are scaled at 90 degrees per volt, and are attenuated a
 
 Spice waveform phases can be modulated at audio rates.
 
-## SPLICE mixer section
-![Splice mixer section image](doc/SpliceSection.png)  
+### SIN (sine), TRI (triangle), and SAW Spice raw outputs
+These six outputs produce the the raw waveforms of the Positive and Negative Spice oscillators, without any amplitude modulation from the Mix Level controls. All of the raw outputs are unipolar 5 volt peak to peak.
 
+### MIX Spice outputs
+These two outputs produce the final mixes of the Positive and Negative Spice oscillators after the Spice mix levels have been applied. These outputs are also unipolar, but the amplitude can vary depending on the settings of the mix level controls. These mixes are the signals that are passed to the Splice mixer section for merging.
+
+## SPLICE mixer section
+![Splice mixer section image](doc/SpliceSection.png)
+
+The Splice mixer is where the Positive and Negative Spice unipolar mixes are merged into a final bipolar signal. There is also the option to mix in an additional external or feedback signal into the final mix.
+
+Below is a simple example of a final Splice mix where the Slice frequency is lower than both Spice frequencies. It is fairly easy to see how the final mix waveform has been created.
+
+![Simple Splice mix example](doc/SimpleSpliceMix.png)
+
+Below is a more complex example of a final Splice mix where the Slice frequency is higher than the Positive Spice frequency, but lower than the Negative Spice frequency. It is much more difficult to look at the final mix and see how it was created, yet the source components are still fairly simple without any modulation. Much more complicated outputs are possible.
+
+![Complex Splice mix example](doc/ComplexSpliceMix.png)
+
+### POS and NEG (Positive/Negative Spice mix) splice level knobs, inputs, and attenuverters
+Specifies how much of the Positive and Negative Spice mixes are included in the final Splice mix. The knobs range from 0 to 100%. The CV inputs are scaled at 10% per volt, and are attenuated and/or inverted by the associated attenuverters. The attenuated CV is summed with the knob value and then clamped to an effective mix level between 0 and 100%.
+
+Having independent control of the Positive and Negative Spice mix levels can be useful for maintaing a 10V peak to peak final Splice mix because the amplitude of the incoming Spice mixes can vary widely.
+
+### EXT (external) input
+This input provides a means of inserting an additional signal into the final Splice mix.
+
+### EXT (external) splice level knob, input, and attenuverter
+Specifies how much of the external signal is included in the final Splice mix. The knob ranges from 0 to 100%. The CV input is scaled at 10% per volt, and is attenuated and/or inverted by the associated attenuverter. The attenuated CV is summed with the knob value and then clamped to an effective mix level between 0 and 100%.
+
+### MIX level knob, input, and attenuverter
+Specifies the level of the final Splice mix. The knob ranges from 0 to 100%. The CV is scaled at 10% per volt, and is attenuated and/or inverted by the associated attenuverter. The attenuated CV is summed with the knob value and then clamped to an effective final mix level between 0 and 100%.
+
+### MIX output
+This is the final Splice mix output.
+
+## Known differences from the FSS OSC2
+
+Here is a summary of the major known differences between the Future Sound Systems OSC2 and the Venom Spice Factory.
+
+- Scissor has been renamed Slice
+- Positive DNA has been renamed Positive Spice
+- Negative DNA has been renamed Negative Spice
+- Glue has been renamed Splice
+- PW Skew has been renamed Spice Skew
+- CV Lock has been renamed Spice Track
+- Sync Lock has been renamed Spice Sync
+- Spice Factory is fully polyphonic
+- Since Spice Factory is a digital implementation, it has upper frequency limits, and is subject to aliasing. But oversampling is available to mitigate aliasing.
+- All VCV knobs have a fine control mechanism, so the Slice and Spice sections have Frequency and Octave knobs instead of Course and Fine frequency controls
+- The Slice has one dedicated exponential FM input and one dedicated linear FM input instead of two FM inputs that can be configured to be linear or exponential
+- All Venom linear FM is through-zero, and can be configured to be AC coupled or DC coupled. I believe the FSS linear FM is always DC coupled, and not through-zero
+- Venom has an added Slice hard sync input
+- Spice mix level CV inputs have added attenuverters
+- Spice has added Phase controls and CV inputs with attenuverters, suitable for audio rate phase modulation
+- The Venom Splice mixer has more controls and VCAs for greater control of the final Splice mix
