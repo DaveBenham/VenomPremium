@@ -414,7 +414,7 @@ If you have a Spice Factory patch that uses feedback, then when you remove the e
 ## SLICE oscillator section
 ![Slice oscillator section image](doc/SliceSection.png)  
 
-The Slice oscillator produces 4 different waveforms simultaneously: Sine, Triangle, Square (pulse), and Saw (descending ramp). All four waveforms are available as independent outputs to be used however you see fit. But the primary purpose of this oscillator is to slice (amplitude modulate, or switch on and off) the Spice oscillators.
+The Slice oscillator produces 4 different waveforms simultaneously: Sine, Triangle, Square (pulse), and Saw (descending ramp). All four waveforms are available as independent outputs to be used however you see fit. But the primary purpose of this oscillator is to slice (switch on and off via amplitude modulation) the Spice oscillators.
 
 ### WAVE square button
 This button selects which waveform is used to slice the Spice waveforms.
