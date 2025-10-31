@@ -448,7 +448,7 @@ The knob ranges from 0% to 100%, with the default noon value of 50%. The positiv
 Provides CV control over the pulse width setting. The CV is scaled at 10% per volt. The CV is attenuated and or inverted by the associated attenuverter knob. The attenuated CV is summed with the PW setting, and the final effective pulse width is clamped to a value from 0 to 100%.
 
 ### SPICE SKEW button
-When enabled, the Spice Skew button causes the Slice pulse width to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. See PW Skew in the Spice oscillators section for more information.
+When enabled, the Spice Skew button causes the Slice pulse width to modulate the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. See [PW Skew in the Spice oscillators section](#pw-skew-spice-frequency-modulation) for more information.
 
 ### EXP FM (exponential frequency modulation) input and attenuverter
 The Slice exponential frequency modulation input is scaled at 1 V/Oct, and it can be attenuated and/or inverted by the attenuverter.
@@ -523,7 +523,7 @@ The LIN buttons control the type of FM applied to the Spice oscillators. There a
 - **Blue** - DC coupled through-zero linear frequency modulation
 
 ### PW Skew Spice frequency modulation
-If the Spice Skew button is on in the Slice Oscillator section, then the Slice pulse width modulates the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
+If the Spice Skew button is enabled in the Slice Oscillator section, then the Slice pulse width modulates the frequency of the Spice frequencies. Positive Spice frequency is decreased as the pulse width increases, and increased as the pulse width decreases. The Negative Spice frequency is modulated in reverse, increasing as the pulse width increases, and decreasing as the pulse width decreases. If the Spice Sync is also active, then the overall shape of the positive and negative Spice mixes will remain constant as the frequencies are skewed.
 
 The diagram below demonstrates how Spice Skew works. Both Spice Sync and Spice Skew are active for these examples. The upper portion of the yellow Splice mix is from the Positive Spice mix, and the bottom portion is from the Negative Spice mix. Note how the wavelengths of the Positive Spice component increase proportionally as the pulse width increases, while the Negative Spice wavelengths decrease. Also note how there is no Positive Spice component when the pulse width is 0%, and no Negative Spice component when the pulse width is 100%.
 
