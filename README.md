@@ -469,9 +469,11 @@ Each of the Slice waveforms are available at these outputs. All slice waveforms 
 The controls, inputs, and outputs are identical for the Positive and Negative Spice oscillators.
 
 The Positive and Negative spice oscillators each produce three different unipolar waveforms simultaneously
-- **SIN** - Actually a fully rectified sine so the frequency is effectively double the rate of the other spice waveforms
+- **SIN** - Actually a fully rectified sine
 - **TRI** - Triangle
 - **SAW** - A descending ramp waveform
+
+Note that the rectified sine actually runs at 1/2 the frequency of the triangle and saw, but because the rectified halves are symmetric, the effective frequency is doubled to match the frequency of the triangle and saw.
 
 The Positive Spice waveforms range from 0 to 5 volts, and the Negative Spice waveforms range from -5 to 0 volts.
 
