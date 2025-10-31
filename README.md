@@ -426,7 +426,9 @@ Specifies the base frequency of the Slice oscillator. The knob has an 8 octave r
 Adjusts the range of the Slice Frequency knob in one octave increments. The Octave knob ranges from -2 to 2, with the default noon position at 0.
 
 ### SLOW (frequency mode) button
-When disabled (default), the Slice Frequency knob range is in audio mode. When enabled, the Frequency knob range is in LFO (low frequency) mode. Oversampling is automatically disabled when the Slow mode is enabled. By default the Oversampling is set to 4x whenever the frequency mode is changed to audio rate (Slow disabled). The oversample rate can then be manually set to any value after the frequency mode change. The default audio mode oversample rate can be adjusted by a context menu option.
+When disabled (default), the Slice Frequency knob range is in audio mode. When enabled, the Frequency knob range is in low frequency mode. This button also controls the frequency range of the Spice oscillators.
+
+The oversample rate is automatically reset whenever the Slow button state changes. Oversampling is automatically disabled when the Slow mode is enabled. By default the Oversampling is set to 4x whenever the frequency mode is changed to audio rate (Slow disabled). The oversample rate can then be manually set to any value after the frequency mode change. The default audio mode oversample rate can be adjusted by a context menu option.
 
 ### V/OCT input
 The Slice V/Oct input is summed with the Freq and Oct values to determine the effective Slice frequency.
@@ -435,12 +437,12 @@ The Slice V/Oct input is summed with the Freq and Oct values to determine the ef
 By default the Slice V/Oct input only modulates the Slice frequency. If the Spice Track button is enabled, then the Slice V/Oct input is also applied to the Spice frequencies.
 
 ### SPICE SYNC button
-When enabled, the Spice Sync button causes the Slice square to hard sync the Spice waveforms. Positive Spice waveforms are synced on the rising edge of the Slice square wave, and Negative Spice waveforms are synced on the falling edge of the Slice square wave.
+When enabled, the Spice Sync button causes the Slice square to hard sync the Spice waveforms. Positive Spice waveforms are synced on the rising edge of the Slice square wave, and Negative Spice waveforms are synced on the falling edge of the Slice square wave. Spice Sync is typically not useful when the Slice frequency is higher than the Spice frequencies. But when Slice is slower, the sync can produce harmonious results regardless what Spice frequencies are chosen.
 
 ### PW (pulse width) knob
 This knob always controls the positive width of the selected Slice waveform, whether it be Sine, Triangle, Square, or Saw. It also controls the pulse width of the square waveform, even if it is not selected.
 
-The knob ranges from 0% to 100%, with the default noon value of 50%. The positive portion of the waveform is stretched or shrunk to fit within the selected width. The negative portion is stretched or shrunk in the oposite direction so that the overall wavelength remains constant.
+The knob ranges from 0% to 100%, with the default noon value at 50%. The positive portion of the waveform is stretched or shrunk to fit within the selected width. The negative portion is stretched or shrunk in the oposite direction so that the overall wavelength remains constant.
 
 ![Pulse Width Examples image](doc/PWexamples.png)
 
@@ -475,12 +477,12 @@ The Positive Spice waveforms range from 0 to 5 volts, and the Negative Spice wav
 
 There are raw outputs for each of the Spice waveforms.
 
-The diagram below demonstrates the waveform shapes, phase relationships, and sync behavior of all six raw Spice waveforms. The Positive and Negative oscillators are at the same frequency, and Spice Skew is enabled. Note how the Positive Spice is synced at the rising edge of the Slice square wave, and the Negative Spice is synced at the falling edge of the Slice square wave.
+The diagram below demonstrates the shapes, phase relationships, and sync behavior of all six raw Spice waveforms. The Positive and Negative oscillators are at the same frequency, and the Spice Sync button is enabled in the Slice section. Note how the Positive Spice is synced at the rising edge of the Slice square wave, and the Negative Spice is synced at the falling edge of the Slice square wave. Spice Sync is typically not useful when the Slice frequency is higher than the Spice frequencies. But when Slice is slower, the sync can produce harmonious results regardless what Spice frequencies are chosen.
 
 ![Raw Spice waveforms image](doc/RawSpicePhaseSyncBehavior.png)
 
 ### FREQ (Positive/Negative spice frequency) knob
-The Freq control determines the base frequency of the Positive or Negative Spice oscillator. The knob has an 8 octave range. The absolute values of the range depend on the settings of the Spice Oct (octave) knob and Slice Slow button (from the Slice Oscillator section). With the Octave at 0 and the Slow option off, the knob ranges from 16.352 to 4186 Hz, with the default noon position at C4 (261.63 Hz). With the Octave at 0 and the Slow option enabled, the knob ranges from 0.125 to 32 Hz, with the default noon position at 2 Hz.
+The Freq knob adjusts the base frequency of the Positive or Negative Spice oscillator. The knob has an 8 octave range. The absolute values of the range depend on the settings of the Spice Oct (octave) knob and Slice Slow button (from the Slice Oscillator section). With the Octave at 0 and the Slow option off, the knob ranges from 16.352 to 4186 Hz, with the default noon position at C4 (261.63 Hz). With the Octave at 0 and the Slow option enabled, the knob ranges from 0.125 to 32 Hz, with the default noon position at 2 Hz.
 
 ### OCT (Positive/Negative Spice octave) knob
 Adjusts the range of the Positive or Negative Spice Frequency knob in one octave increments. The Octave knob ranges from -2 to 2, with the default noon position at 0.
@@ -488,7 +490,7 @@ Adjusts the range of the Positive or Negative Spice Frequency knob in one octave
 ### V/OCT (Positive/Negative Spice volt/octave) input
 The Spice V/Oct input is summed with the Freq and Oct values to determine the effective Spice frequency.
 
-If the Spice Track button is enabled in the Slice Oscillator section, then the Slice V/Oct input also contributes to the Spice frequency.
+If the Spice Track button is enabled in the Slice oscillator section, then the Slice V/Oct input also contributes to the Spice frequency.
 
 ### LEVEL (Positive/Negative waveform mix level) knobs, inputs, and attenuverters
 The Positive and Negative Spice oscillators each have a set of mix controls for the sine, triangle, and saw waveforms. The controls determine both how much of each waveform is included in the Positive or Negative Spice Mix, and to what degree the waveforms are switched on and off by the Slice oscillator.
