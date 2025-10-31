@@ -585,6 +585,8 @@ Here is a summary of the major known differences between the Future Sound System
 - Sync Lock has been renamed Spice Sync
 - Spice Factory is fully polyphonic
 - Since Spice Factory is a digital implementation, it has upper frequency limits, and is subject to aliasing. But oversampling is available to mitigate aliasing.
+- Any of the Slice oscillator waveforms can be used to slice the Spice waveforms via amplitude modulation, not just the square waveform
+- Pulse width modulation can be applied to the Slice sine, triangle, and saw waveforms, not just the square waveform
 - All VCV knobs have a fine control mechanism, so the Slice and Spice sections have Frequency and Octave knobs instead of Course and Fine frequency controls
 - The Slice has one dedicated exponential FM input and one dedicated linear FM input instead of two FM inputs that can be configured to be linear or exponential
 - All Venom linear FM is through-zero, and can be configured to be AC coupled or DC coupled. I believe the FSS linear FM is always DC coupled, and not through-zero
