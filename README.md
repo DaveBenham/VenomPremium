@@ -373,7 +373,7 @@ Here is a summary of the major known differences between XAOC Devices Sofia and 
 # Spice Factory
 ![Spice Factory module image](doc/SpiceFactory.png)  
 
-Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html). Spice Factory attempts to replicate the features of the FSS OSC2, and then adds many additional features.
+Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html). Spice Factory attempts to replicate the features of the FSS OSC2, and then adds many [additional features](#known-differences-from-the-fss-osc2).
 
 The two primary unipolar sound sources are Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts). A third bipolar Slice oscillator is used as an amplitude modulator to cut the Spice waveforms into pieces. The Positive Spice is preserved during the positive portion of the Slice, and the Negative Spice is preserved during the negative portion of the Slice. The modulated Spice pieces are then merged into a cohesive complex bipolar waveform by the Splice mixer. This briefly describes the wave splicing capabilities of Spice Factory. But there are many controls and CV inputs to perform all manner of modulation throughout the entire process:
  - Pulse width modulation
