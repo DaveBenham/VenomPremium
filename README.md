@@ -1,19 +1,75 @@
 # VenomPremium
 Documentation for Venom Premium Plugins for VCV Rack
 
+## Table of Contents
+
+- [Standard Venom Context Menus](#standard-venom-context-menus)
+- [Venom Oscillations Plugin](#venom-oscillations-plugin)
+  - [Sofia's Daughter](#sofias-daughter)
+  - [Spice Factory](#spice-factory)
+
+# Standard Venom Context Menus
+
+There are a set of context menu options that are common to all Venom modules.
+
+## Custom Port and Parameter Names
+Every port (input or output), and every parameter (knob, slider, or button) has its own context menu option to set a custom name. Custom names only appear in context menus and hover text - they do not change the faceplate graphics.
+
+If a parameter or port is given a custom name, then an additional option is added to restore the factory default name.
+
+Custom names are saved with the patch and with presets, and restored upon patch or preset load. Custom names are also preserved when duplicating a module.
+
+## Parameter Locks and Custom Defaults
+Every parameter (knob, slider, or button) has its own parameter context menu options to lock the paramenter as well as set a custom default value. In addition, there are module context menu options to lock and unlock all parameters.
+
+Parameter lock and custom default settings are saved with the patch and with presets, and restored upon patch or preset load. Parameter lock and custom default settings are also preserved when duplicating a module.
+
+### Parameter Locks
+The parameter tooltip includes the word "locked" below the parameter name when hovering over a locked parameter.
+
+The parameter value cannot be changed by any means while the parameter is locked. All of the normal means of changing a parameter value are blocked:
+
+- The parameter cannot be dragged or pushed
+- Context menu value keyins are ignored
+- Double click and context menu initialization are ignored
+- Randomization requests are ignored
+
+### Custom Defaults
+A custom default value overrides the factory default whenever a parameter is initialized. An additional parameter menu option is added to restore the factory default whenever a custom default is in effect.
+
+## Themes
+The module context menu includes options to set the default theme and default dark theme for the VenomOscillations plugin, as well as a theme override for each module instance.
+
+There are 4 themes to choose from.
+
+- Ivory (high contrast with off-white background)
+- Coal (high contrast with blackish background)
+- Earth (low contrast with a brown background)
+- Danger (high contrast with vibrant red background)
+
+If a module instance is set to use a specific theme, then that theme will be used regardless whether VCV Rack is set to use dark panels or not. If a module is set to use the default theme, then the VCV Rack "Use dark panels if available" setting controls which default is used. If not enabled, then the default theme is used. If enabled then the default dark theme is used.
+
+If you want the default theme to disregard the VCV Rack dark panel setting, then simply set both defaults to the same theme.
+
+The factory default theme is ivory, and the factory default dark theme is coal.
+
 # Venom Oscillations plugin
 Venom Oscillations [version 2.1.0](VenomOscillationsChangeLog.md) for VCV Rack 2 is copyright 2025 Dave Benham and licensed under the [VCV Rack End User License Agreement](LICENSE.md).
 
-Thank you for your interest in and/or purchase of the Venom Oscillations plugin for VCV Rack 2. This plugin is intended to be a set of complex oscillator modules that produce interesting sounds that are difficult to create otherwise.
+Thank you for your interest in the Venom Oscillations plugin for VCV Rack 2. This plugin is a collection of complex oscillator modules that produce interesting sounds that are difficult to create otherwise.
 
-Currently there is only one module, Sofia's Daughter.
+Currently there are two modules
+- [Sofia's Daughter](#sofias-daughter) - a polyphonic formant oscillator inspired by the XAOC Devices Sofia Eurorack module
+- [Spice Factory](#spice-factory) - a polyphonic wave splicing oscillator inspired by the Future Sound Systems OSC2 Recombination Engine
 
-I have tentative plans for at least one more complex oscillator. If/when a new oscillator is added, the plugin purchase price will likely increase in $5 increments. However, existing plugin owners will receive the new module for free.
+You can purchase either module individually at $15 each, or purchase the entire plugin for $25. If I every add another oscillator to the plugin, then owners of the entire plugin will automatically get any additional oscillator for free. However, I currently don't have any plans for another complex oscillator.
 
 If you are on the fence of purchasing, you can try out a [Sofia's Daughter prototype/emulation patch](https://patchstorage.com/orb_sq-and-venom-sophia/) created using only free modules. You can experiment with some of the types of sounds Sofia's Daughter can produce. If you like it, then you can be confident Venom Oscillations sounds at least as good, has greater tonal range, is more CPU efficient, and is much more convenient to patch than the emulation/prototype patch.
 
+Likewise, you can try out an [old emulation of the OSC2 Recombination Engine](https://patchstorage.com/fss-osc2-recombination-engine-emulator-v2/) constructed from free modules to see if you might like the sounds of Spice Factory.
+
 # Sofia's Daughter
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 ![Sofia's Daughter module image](doc/SofiasDaughter.png)  
 Sofia's Daughter is a complex polyphonic formant oscillator inspired by the wonderful [XAOC Devices Sofia "1955 Transcendent Analog Waveform Oscillator"](http://xaocdevices.com/main/sofia). Sofia's Daughter implements all the basic functionality (though not necessarily the exact sound) of the XAOC Eurorack hardware module, and then extends the functionality with additional controls, inputs, and outputs. A [complete list of known differences](#differences-from-xaoc-devices-sofia) is listed at the end of this documentation.
@@ -36,7 +92,7 @@ Polyphony also makes it possible to work with more than two Ripple elements for 
 
 Be sure to watch [Omri Cohen's overview of Sofia's Daughter](https://www.youtube.com/watch?v=yUtYXnmDmvg) that provides many ideas on techniques to explore. You might also check out video's about the XAOC Devices Sofia from [Tom Churchill](https://youtu.be/5lWf4N7jbbI) and [Monotrail Tech Talk](https://youtu.be/xdjGRF7Wtwg), as they may also provide inspiration for ways you might use Sofia's Daughter in your VCV patches.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 ## Sofia's Daughter Layout
 Sofia's Daughter can be divided into 5 distinct sections, each with its own purpose
@@ -46,7 +102,7 @@ Sofia's Daughter can be divided into 5 distinct sections, each with its own purp
 - **[Global](#global-section)** ***(mid center)***: Controls the mix of the three elements, plus additional controls that affect all three elements
 - **[Outputs](#output-section)** ***(bottom)***: Nine different outputs are available
 
-There are also [context menu options](#context-menus) that give access to some additional minor functionality.
+Don't forget about [Venom context menu options](standard-venom-context-menus) that are common to all Venom modules.
 
 ## Fundamental Section
 ![Fundamental section image](doc/FundamentalSection.png)  
@@ -109,7 +165,7 @@ The **SOFT SYNC** CV input reverses the direction of the fundamental wave upon r
 
 Both sync inputs use Schmitt triggers that are triggered at 2V and reset at 0.2V so they can be used with both unipolar and bipolar inputs.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 ## Ripple Sections
 ![Ripple sections image](doc/RippleSections.png)  
@@ -191,7 +247,7 @@ The traces below demonstrate the different Warp effects that are available. CCW 
 
 Phase modulation can be applied to the Ripple wave via the **PM** CV input, with its own dedicated attenuator.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 ## Global Section
 ![Global section image](doc/GlobalSection.png)  
@@ -244,7 +300,7 @@ Once polyphony is introduced at any one of the CV inputs, all outputs become pol
 
 The **RESET POLY** button can be used to temporarily force all outputs to monophonic so that upon release, the outputs will revert back to the maximum number of channels found across all external CV inputs.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 ## Output Section
 ![Output section image](doc/OutputsSection.png)  
@@ -267,52 +323,7 @@ Any of the outputs can be used as an audio source, or as a modulator. Many inter
 
 All outputs are constant monophonic 0V if Sofia's Daughter is bypassed.
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus)*
-
-## Context Menus
-
-### Custom Port and Parameter Names
-Every port (input or output), and every parameter (knob, slider, or button) has its own context menu option to set a custom name. Custom names only appear in context menus and hover text - they do not change the faceplate graphics.
-
-If a parameter or port is given a custom name, then an additional option is added to restore the factory default name.
-
-Custom names are saved with the patch and with presets, and restored upon patch or preset load. Custom names are also preserved when duplicating a module.
-
-### Parameter Locks and Custom Defaults
-Every parameter (knob, slider, or button) has its own parameter context menu options to lock the paramenter as well as set a custom default value. In addition, there are module context menu options to lock and unlock all parameters.
-
-Parameter lock and custom default settings are saved with the patch and with presets, and restored upon patch or preset load. Parameter lock and custom default settings are also preserved when duplicating a module.
-
-**Parameter Locks**  
-The parameter tooltip includes the word "locked" below the parameter name when hovering over a locked parameter.
-
-The parameter value cannot be changed by any means while the parameter is locked. All of the normal means of changing a parameter value are blocked:
-
-- The parameter cannot be dragged or pushed
-- Context menu value keyins are ignored
-- Double click and context menu initialization are ignored
-- Randomization requests are ignored
-
-**Custom Defaults**  
-A custom default value overrides the factory default whenever a parameter is initialized. An additional parameter menu option is added to restore the factory default whenever a custom default is in effect.
-
-### Themes
-The module context menu includes options to set the default theme and default dark theme for the VenomOscillations plugin, as well as a theme override for each module instance.
-
-There are 4 themes to choose from.
-
-- Ivory (high contrast with off-white background)
-- Coal (high contrast with blackish background)
-- Earth (low contrast with a brown background)
-- Danger (high contrast with vibrant red background)
-
-If a module instance is set to use a specific theme, then that theme will be used regardless whether VCV Rack is set to use dark panels or not. If a module is set to use the default theme, then the VCV Rack "Use dark panels if available" setting controls which default is used. If not enabled, then the default theme is used. If enabled then the default dark theme is used.
-
-If you want the default theme to disregard the VCV Rack dark panel setting, then simply set both defaults to the same theme.
-
-The factory default theme is ivory, and the factory default dark theme is coal.
-
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 ## Differences from XAOC Devices Sofia
 
@@ -368,11 +379,12 @@ Here is a summary of the major known differences between XAOC Devices Sofia and 
 - Damped Ripple A
 - Damped Ripple B
 
-*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [ContextMenus](#context-menus) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia)*
+*Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 # Spice Factory
-![Spice Factory module image](doc/SpiceFactory.png)  
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
+![Spice Factory module image](doc/SpiceFactory.png)  
 Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html). Spice Factory attempts to replicate the features of the FSS OSC2, and then adds many [additional features](#known-differences-from-the-fss-osc2).
 
 The two primary unipolar sound sources are Positive Spice (0 to 5 volts), and Negative Spice (-5 to 0 volts). A third bipolar Slice oscillator is used as an amplitude modulator to cut the Spice waveforms into pieces. The Positive Spice is preserved during the positive portion of the Slice, and the Negative Spice is preserved during the negative portion of the Slice. The modulated Spice pieces are then merged into a cohesive complex bipolar waveform by the Splice mixer. This briefly describes the wave splicing capabilities of Spice Factory. But there are many controls and CV inputs to perform all manner of modulation throughout the entire process:
@@ -390,6 +402,20 @@ All inputs can be modulated at audio rates. The module can also be put into an L
 There are a total of thirteen outputs available for use as audio or CV throughout your patch, providing many opportunities for feedback modulation.
 
 Since Spice Factory emulates the FSS OSC2 feature set as a starting point, the techniques demonstrated in the [DivKid video on the FSS OSC2](https://www.youtube.com/watch?v=Vy23uZSsdLY) can be applied to Spice Factory as well. Just remember that many of the OSC2 concepts have been renamed in Spice Factory. Of course many more techniques are available with the additional controls unique to the Spice Factory.
+
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+
+## Spice Factory Layout
+Spice Factory can be divided into 5 distinct sections, each with its own purpose
+- **[Miscellaneous controls](#miscellanious-controls)** ***(top)***
+- **[Slice oscillator](#slice-oscillator-section)** ***(left)***
+- **[Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections)** ***(center left)***
+- **[Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections)** ***(center right)***
+- **[Splice mixer](#output-section)** ***(right)***
+
+Don't forget about [Venom context menu options](standard-venom-context-menus) that are common to all Venom modules.
+
+## Miscellaneous Controls
 
 ### Anti-aliasing and the OVER SAMPLE button
 Spice Factory is a purely digital implementation with many non-linear processes that can lead to high frequency outputs. High frequency content that is above the Nyquist frequency (1/2 the VCV sample rate) is reflected down and perceived as inharmonic audio aliasing. The aliasing is usually not desired, so Spice Factory offers oversampling options to mitigate aliasing.
@@ -410,6 +436,12 @@ Oversampling is computationally expensive, so it is best to use the lowest level
 Spice Factory is fully polyphonic. The number of channels for all outputs is determined by the maximum channel count found across all inputs. Monophonic inputs are replicated to match the output channel count. Polyphonic inputs with fewer channels assume constant 0 volts for the missing channels.
 
 If you have a Spice Factory patch that uses feedback, then when you remove the external polyphonic input, the outputs will continue to be polyphonic due to the feedback. In this case you can press the Reset Poly button to temporarily force all outputs to be monophonic. When you release the button the feedback will still be monophonic, so the outputs will remain monophonic.
+
+### Bypass Behavior
+
+All outputs are constant monophonic 0V if Spice Factory is bypassed.
+
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ## SLICE oscillator section
 ![Slice oscillator section image](doc/SliceSection.png)  
@@ -463,6 +495,8 @@ The rising edge of a trigger or gate at the Slice Sync input resets the Slice os
 
 ### SQR (square), SIN (sine), TRI (triangle), and SAW (descending ramp) outputs
 Each of the Slice waveforms are available at these outputs. All slice waveforms are bipolar 10 volts peak to peak (-5V to 5V).
+
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ## POSITIVE and NEGATIVE SPICE oscillator sections
 ![Spice oscillator sections image](doc/SpiceSections.png)  
@@ -546,6 +580,8 @@ These six outputs produce the the raw waveforms of the Positive and Negative Spi
 ### MIX Spice outputs
 These two outputs produce the final mixes of the Positive and Negative Spice oscillators after the Spice mix levels have been applied. These outputs are also unipolar, but the amplitude can vary depending on the settings of the mix level controls. These mixes are the signals that are passed to the Splice mixer section for merging.
 
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+
 ## SPLICE mixer section
 ![Splice mixer section image](doc/SpliceSection.png)
 
@@ -576,6 +612,8 @@ Specifies the level of the final Splice mix. The knob ranges from 0 to 100%. The
 ### MIX output
 This is the final Splice mix output.
 
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+
 ## Known differences from the FSS OSC2
 
 Here is a summary of the major known differences between the Future Sound Systems OSC2 and the Venom Spice Factory.
@@ -599,3 +637,5 @@ Here is a summary of the major known differences between the Future Sound System
 - Spice mix level CV inputs have added attenuverters
 - Spice has added Phase controls and CV inputs with attenuverters, suitable for audio rate phase modulation
 - The Venom Splice mixer has more controls and VCAs for greater control of the final Splice mix
+
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
