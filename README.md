@@ -68,7 +68,7 @@ You can purchase either module individually at $15 each, or purchase the entire 
 
 If you are on the fence of purchasing, you can try out a [Sofia's Daughter prototype/emulation patch](https://patchstorage.com/orb_sq-and-venom-sophia/) created using only free modules. You can experiment with some of the types of sounds Sofia's Daughter can produce. If you like it, then you can be confident Venom Oscillations sounds at least as good, has greater tonal range, is more CPU efficient, and is much more convenient to patch than the emulation/prototype patch.
 
-Likewise, you can try out an [old emulation of the OSC2 Recombination Engine](https://patchstorage.com/fss-osc2-recombination-engine-emulator-v2/) constructed from free modules to see if you might like the sounds of Spice Factory.
+Likewise, you can try out an [old emulation of the OSC2 Recombination Engine](https://patchstorage.com/fss-osc2-recombination-engine-emulator-v2/) constructed from free modules. It doesn't have all the features of Spice Factory, but it can give you an idea if you might like the sounds and workflow of Spice Factory.
 
 *[Venom Premium TOC](#table-of-contents)*
 
