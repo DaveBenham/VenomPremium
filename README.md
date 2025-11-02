@@ -386,7 +386,7 @@ Here is a summary of the major known differences between XAOC Devices Sofia and 
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 # Spice Factory
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ![Spice Factory module image](doc/SpiceFactory.png)  
 Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html). Spice Factory attempts to replicate the features of the FSS OSC2, and then adds many [additional features](#known-differences-from-the-fss-osc2).
@@ -407,7 +407,7 @@ There are a total of thirteen outputs available for use as audio or CV throughou
 
 Since Spice Factory emulates the FSS OSC2 feature set as a starting point, the techniques demonstrated in the [DivKid video on the FSS OSC2](https://www.youtube.com/watch?v=Vy23uZSsdLY) can be applied to Spice Factory as well. Just remember that many of the OSC2 concepts have been renamed in Spice Factory. Of course many more techniques are available with the additional controls unique to the Spice Factory.
 
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ## Spice Factory Layout
 Spice Factory can be divided into 5 distinct sections, each with its own purpose
@@ -445,7 +445,7 @@ If you have a Spice Factory patch that uses feedback, then when you remove the e
 
 All outputs are constant monophonic 0V if Spice Factory is bypassed.
 
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ## SLICE oscillator section
 ![Slice oscillator section image](doc/SliceSection.png)  
@@ -500,7 +500,7 @@ The rising edge of a trigger or gate at the Slice Sync input resets the Slice os
 ### SQR (square), SIN (sine), TRI (triangle), and SAW (descending ramp) outputs
 Each of the Slice waveforms are available at these outputs. All slice waveforms are bipolar 10 volts peak to peak (-5V to 5V).
 
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ## POSITIVE and NEGATIVE SPICE oscillator sections
 ![Spice oscillator sections image](doc/SpiceSections.png)  
@@ -584,7 +584,7 @@ These six outputs produce the the raw waveforms of the Positive and Negative Spi
 ### MIX Spice outputs
 These two outputs produce the final mixes of the Positive and Negative Spice oscillators after the Spice mix levels have been applied. These outputs are also unipolar, but the amplitude can vary depending on the settings of the mix level controls. These mixes are the signals that are passed to the Splice mixer section for merging.
 
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ## SPLICE mixer section
 ![Splice mixer section image](doc/SpliceSection.png)
@@ -616,7 +616,7 @@ Specifies the level of the final Splice mix. The knob ranges from 0 to 100%. The
 ### MIX output
 This is the final Splice mix output.
 
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ## Known differences from the FSS OSC2
 
@@ -642,4 +642,5 @@ Here is a summary of the major known differences between the Future Sound System
 - Spice has added Phase controls and CV inputs with attenuverters, suitable for audio rate phase modulation
 - The Venom Splice mixer has more controls and VCAs for greater control of the final Splice mix
 
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+[Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
