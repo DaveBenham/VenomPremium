@@ -53,6 +53,8 @@ If you want the default theme to disregard the VCV Rack dark panel setting, then
 
 The factory default theme is ivory, and the factory default dark theme is coal.
 
+*[Venom Premium TOC](#table-of-contents)*
+
 # Venom Oscillations plugin
 Venom Oscillations [version 2.1.0](VenomOscillationsChangeLog.md) for VCV Rack 2 is copyright 2025 Dave Benham and licensed under the [VCV Rack End User License Agreement](LICENSE.md).
 
@@ -67,6 +69,8 @@ You can purchase either module individually at $15 each, or purchase the entire 
 If you are on the fence of purchasing, you can try out a [Sofia's Daughter prototype/emulation patch](https://patchstorage.com/orb_sq-and-venom-sophia/) created using only free modules. You can experiment with some of the types of sounds Sofia's Daughter can produce. If you like it, then you can be confident Venom Oscillations sounds at least as good, has greater tonal range, is more CPU efficient, and is much more convenient to patch than the emulation/prototype patch.
 
 Likewise, you can try out an [old emulation of the OSC2 Recombination Engine](https://patchstorage.com/fss-osc2-recombination-engine-emulator-v2/) constructed from free modules to see if you might like the sounds of Spice Factory.
+
+*[Venom Premium TOC](#table-of-contents)*
 
 # Sofia's Daughter
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
@@ -382,7 +386,7 @@ Here is a summary of the major known differences between XAOC Devices Sofia and 
 *Quick Links: [Intro](#sofias-daughter) | [Fundamental](#fundamental-section) | [Ripples](#ripple-sections) | [Global](#global-section) | [Output](#output-section) | [XAOS-Venom Differences](#differences-from-xaoc-devices-sofia) | [Venom Premium TOC](#table-of-contents)*
 
 # Spice Factory
-*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
+*Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellanious-controls) | [Slice oscillator](#slice-oscillator-section) | [Positive Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
 ![Spice Factory module image](doc/SpiceFactory.png)  
 Spice Factory is a polyphonic complex wave splicing triple oscillator heavily inspired by the [Future Sound Systems OSC2 Recombination engine](https://www.futuresoundsystems.co.uk/returnosc2.html). Spice Factory attempts to replicate the features of the FSS OSC2, and then adds many [additional features](#known-differences-from-the-fss-osc2).
