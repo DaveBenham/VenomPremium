@@ -420,7 +420,7 @@ Spice Factory can be divided into 5 distinct sections, each with its own purpose
 Don't forget about [Venom context menu options](standard-venom-context-menus) that are common to all Venom modules.
 
 ## Miscellaneous Controls
-
+![Miscellaneous Controls image](doc/SpiceFactoryMiscellaneous.png)  
 ### Anti-aliasing and the OVER SAMPLE button
 Spice Factory is a purely digital implementation with many non-linear processes that can lead to high frequency outputs. High frequency content that is above the Nyquist frequency (1/2 the VCV sample rate) is reflected down and perceived as inharmonic audio aliasing. The aliasing is usually not desired, so Spice Factory offers oversampling options to mitigate aliasing.
 
@@ -643,4 +643,3 @@ Here is a summary of the major known differences between the Future Sound System
 - The Venom Splice mixer has more controls and VCAs for greater control of the final Splice mix
 
 *Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
-[Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#output-section) | [Venom - Future Sound Systems Differences](#known-differences- from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
