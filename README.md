@@ -64,7 +64,7 @@ Currently there are two modules
 - [Sofia's Daughter](#sofias-daughter) - a polyphonic formant oscillator inspired by the XAOC Devices Sofia Eurorack module
 - [Spice Factory](#spice-factory) - a polyphonic wave splicing oscillator inspired by the Future Sound Systems OSC2 Recombination Engine
 
-You can purchase either module individually at $15 each, or purchase the entire plugin for $25. If I every add another oscillator to the plugin, then owners of the entire plugin will automatically get any additional oscillator for free. However, I currently don't have any plans for another complex oscillator.
+You can purchase either module individually at $15 each, or purchase the entire plugin for $25. If I ever add another oscillator to the plugin, then owners of the entire plugin will automatically get any additional oscillator for free. However, I currently don't have any plans for another complex oscillator.
 
 If you are on the fence of purchasing, you can try out a [Sofia's Daughter prototype/emulation patch](https://patchstorage.com/orb_sq-and-venom-sophia/) created using only free modules. You can experiment with some of the types of sounds Sofia's Daughter can produce. If you like it, then you can be confident Venom Oscillations sounds at least as good, has greater tonal range, is more CPU efficient, and is much more convenient to patch than the emulation/prototype patch.
 
