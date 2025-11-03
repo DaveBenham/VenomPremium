@@ -453,7 +453,11 @@ All outputs are constant monophonic 0V if Spice Factory is bypassed.
 The Slice oscillator produces 4 different waveforms simultaneously: Sine, Triangle, Square (pulse), and Saw (descending ramp). All four waveforms are available as independent outputs to be used however you see fit. But the primary purpose of this oscillator is to slice (switch on and off via amplitude modulation) the Spice oscillators.
 
 ### WAVE square button
-This button selects which waveform is used to slice the Spice waveforms.
+This button selects which waveform is used to slice the Spice waveforms. There are four options:
+- **SIN** - sine
+- **TRI** - triangle
+- **SQR** - square (pulse)
+- **SAW** - descending ramp
 
 ### FREQ (frequency) knob
 Specifies the base frequency of the Slice oscillator. The knob has an 8 octave range. The absolute values of the range depend on the settings of the OCT (octave) knob and SLOW button. With the Octave at 0 and the Slow option off, the knob ranges from 16.352 to 4186 Hz, with the default noon position at C4 (261.63 Hz). With the Octave at 0 and the Slow option enabled, the knob ranges from 0.125 to 32 Hz, with the default noon position at 2 Hz.
