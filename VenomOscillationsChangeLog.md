@@ -1,6 +1,6 @@
 # Venom Oscillations Change Log
 
-## 2.1.0 (2025-11-??)
+## 2.1.0 (2025-11-17)
 ### New Module
 - Spice Factory
 
