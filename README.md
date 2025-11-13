@@ -117,7 +117,7 @@ Sofia's Daughter can be divided into 5 distinct sections, each with its own purp
 - **[Global](#global-section)** ***(mid center)***: Controls the mix of the three elements, plus additional controls that affect all three elements
 - **[Outputs](#output-section)** ***(bottom)***: Nine different outputs are available
 
-Don't forget about [Venom context menu options](standard-venom-context-menus) that are common to all Venom modules.
+Don't forget about [Venom context menu options](#standard-venom-context-menus) that are common to all Venom modules.
 
 ## Fundamental Section
 ![Fundamental section image](doc/FundamentalSection.png)  
@@ -430,7 +430,7 @@ Spice Factory can be divided into 5 distinct sections, each with its own purpose
 - **[Negative Spice oscillator](#positive-and-negative-spice-oscillator-sections)** ***(center right)***
 - **[Splice mixer](#output-section)** ***(right)***
 
-Don't forget about [Venom context menu options](standard-venom-context-menus) that are common to all Venom modules.
+Don't forget about [Venom context menu options](#standard-venom-context-menus) that are common to all Venom modules.
 
 ## Miscellaneous Controls
 ![Miscellaneous Controls image](doc/SpiceFactoryMiscellaneous.png)  
