@@ -70,6 +70,17 @@ If you are on the fence of purchasing, you can try out a [Sofia's Daughter proto
 
 Likewise, you can try out an [old emulation of the OSC2 Recombination Engine](https://patchstorage.com/fss-osc2-recombination-engine-emulator-v2/) constructed from free modules. It doesn't have all the features of Spice Factory, but it can give you an idea if you might like the sounds and workflow of Spice Factory.
 
+## Acknowledgments
+First and foremost, I want to thank XAOS Devices and Future Sound Systems for creating their amazing hardware modules that served as inspiration for the modules in this plugin, and for allowing me to acknowledge the important heritage of Sofia's Daughter and Spice Factory.
+
+I must also thank my testing team for all the work they put in making sure everything works as it should, and making suggestions for improvements
+- Omri Cohen
+- Don Cross (cosinekitty)
+- Andreya Ek Frisk
+- Stephan Muesch (rsmus7)
+
+Make that a double thanks to Omri for his videos on Sofia's Daughter and Spice Factory. Actually for all the videos he creates about the VCV ecosystem. They take a lot of work, and are a tremendous asset for developers like myself.
+
 *[Venom Premium TOC](#table-of-contents)*
 
 # Sofia's Daughter
@@ -405,7 +416,9 @@ All inputs can be modulated at audio rates. The module can also be put into an L
 
 There are a total of thirteen outputs available for use as audio or CV throughout your patch, providing many opportunities for feedback modulation.
 
-Since Spice Factory emulates the FSS OSC2 feature set as a starting point, the techniques demonstrated in the [DivKid video on the FSS OSC2](https://www.youtube.com/watch?v=Vy23uZSsdLY) can be applied to Spice Factory as well. Just remember that many of the OSC2 concepts have been renamed in Spice Factory. Of course many more techniques are available with the additional controls unique to the Spice Factory.
+Watch [Omri Cohen's Spice Factory video](https://www.youtube.com/watch?v=Jpm6Po5_48g) for a wonderful introduction to many of the Spice Factory features, and many beautiful sound examples.
+
+Since Spice Factory emulates the FSS OSC2 feature set as a starting point, the techniques demonstrated in the [DivKid video on the FSS OSC2](https://www.youtube.com/watch?v=Vy23uZSsdLY) can also be applied to Spice Factory. Just remember that many of the [OSC2 concepts have been renamed in Spice Factory](#known-differences-from-the-fss-osc2). Of course many more techniques are available with the additional controls unique to the Spice Factory.
 
 *Quick Links: [Intro](#spice-factory) | [Miscellaneous controls](#miscellaneous-controls) | [Slice oscillator](#slice-oscillator-section) | [Spice oscillators](#positive-and-negative-spice-oscillator-sections) | [Splice mixer](#splice-mixer-section) | [Venom - FSS differences](#known-differences-from-the-fss-osc2) | [Venom Premium TOC](#table-of-contents)*
 
