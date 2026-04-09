@@ -1,5 +1,7 @@
-# VenomPremium
-Documentation for Venom Premium Plugins for VCV Rack
+# Venom Premium
+This is documentation for Venom Premium Plugins for VCV Rack containing commercial modules.
+
+Also checkout the [Venom site](https://github.com/DaveBenham/VenomModules/blob/main/README.md) for documenation about free Venom modules.
 
 ## Table of Contents
 
