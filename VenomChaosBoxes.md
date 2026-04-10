@@ -38,7 +38,7 @@ Thanks to my beta testers - It is not possible to release a quality product with
 - Stephan Muesch (rsmus7)
 - Koen Kaptijn
 
-In particular, the Vlippoo Box would not sound as good as it does without the many contributions from Koen. Years ago we both started emulating the Blippoo Box using existing free VCV modules. We traded ideas, shared patches, and developed a basic understanding of how the Blippoo Box works. His involvement continued during development and testing of the Venom Vlippoo Box module. Koen's insights were critical to the final product.
+In particular, the  would not sound as good as it does without the many contributions from Koen. Years ago we both started emulating the Blippoo Box using existing free VCV modules. We traded ideas, shared patches, and developed a basic understanding of how the Blippoo Box works. His involvement continued during development and testing of the Venom  module. Koen's insights were critical to the final product.
 
 *[Venom Premium TOC](README.md#table-of-contents)*
 
@@ -856,7 +856,7 @@ Controls the amount of Sample & Hold signal used to modulate the oscillator A fr
 The knob may be unipolar or bipolar depending on the Attenuator configuration context menu option.
 
 ### MOD 2 > RATE B knob
-Controls the amount of a second modulation source to modulate the oscillator B frequency. The lower right switch selects either the Sample & Hold or Triangle B as the modulation source.
+Controls the amount of a second modulation source to modulate the oscillator B frequency. The lower right switch selects either the Sample & Hold or Triangle A as the modulation source.
 
 The knob may be unipolar or bipolar depending on the Attenuator configuration context menu option.
 
