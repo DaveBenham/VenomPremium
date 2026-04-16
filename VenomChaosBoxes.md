@@ -129,7 +129,7 @@ Controls the routing of the cross modulation
 - **1<>2** - Each oscillator modulates the other's frequency
 
 ### FM Amount input and knob
-Controls the amount of frequency modulation by attenuating the modulation signal. This functions as a standard 2 quadrant VCA. An input of 10V equals 100%, and the unipolar knob attenuates the control voltage. The input is normalled to 10V, so if unpatched the knob directly controls the ammount of modulation. This is diffent behavior than the hardware. The Hybrid Knot hardware sums the input with the knob value.
+Controls the amount of frequency modulation by attenuating the modulation signal. This functions as a standard 2 quadrant VCA. An input of 10V equals 100%, and the unipolar knob attenuates the control voltage. The input is normalled to 10V, so if unpatched the knob directly controls the ammount of modulation. This is diffent behavior than the hardware. The Double Knot hardware sums the input with the knob value.
 
 *Quick Links: [Intro](#hybrid-knot) | [Oscillators](#oscillators) | [Clock](#clock) | [Shift registers](#shift-registers) | [Envelopes](#envelopes) | [VCAs](#vcas) | [Output](#main-output) | [Utilities](#utilities) | [Chaos Boxes](#venom-chaos-boxes-plugin) | [Venom Premium TOC](README.md#table-of-contents)*
 
