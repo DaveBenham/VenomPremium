@@ -64,6 +64,8 @@ In contrast, the Hybrid Knot is pure digital, and no attempt was made to emulate
 
 Note that if oversampling is enabled then very high frequency output can be sharply attenuated by the oversampling low pass filter.
 
+The differences described above apply to the entire module. There are a number of additional differences specific to each functional component described in the remainder of this document.
+
 ### Oversampling
 
 Because Hybrid Knot is digital, it can generate high frequency content beyond the Nyquist frequency that can reflect down as undesired unharmonic harsh noise. The Oversampling button in the upper right corner can be used to set various levels of oversampling to mitigate digital aliasing. Oversampling can use a lot of CPU power, so it is best to use the lowest level of oversampling that sounds good for your patch.
