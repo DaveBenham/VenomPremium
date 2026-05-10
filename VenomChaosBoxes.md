@@ -432,9 +432,6 @@ The second and third option may be useful when using the Venjolin to create LFO 
 
 ### Context menu options
 
-***Add Venjolin+*** option  
-You can use this menu option to add a [Venjolin Plus module](#venjolin-plus) to your patch. If you purchased the Venjolin then this is the only way to access the Venjolin Plus. If you purchased the entire Chaos Boxes plugin then you can access the Venjolin Plus through your module browser, and there is no need to use this option.
-
 ***Attenuator configuration*** option  
 By default all modulation attenuator knobs are configured to be simple unipolar attenuators like the Benjolin hardware.
 
@@ -669,8 +666,6 @@ The Chaos Expanders give access to the underlying digital shift register within 
 
 # Venjolin Plus 
 ![Venjolin Plus module image](doc/VenjolinPlus.png)  
-
-***Important note - if you purchased the Venjolin rather than the entire Chaos Boxes plugin then your module browser will not show the Venjolin Plus. You can still access the Venjolin Plus by inserting a Venjolin into your patch, and then use the "Add Venjolin+" context menu option. You can delete the Venjolin after the Venjolin Plus has been added to your patch.***
 
 The Venjolin Plus is an enhanced version of the Venjolin. The [Configuration](#configuration-section), [Osc1](#osc1-oscillator-1-section), [Osc2](#osc2-oscillator-2-section), and [Rungler](#rungler-section) sections are identical to the Venjolin. Refer to the [Venjolin documentation](#venjolin) for information about those sections.
 
@@ -956,9 +951,6 @@ The Mod 2 Source switch is not present in the Blippoo Box Legacy hardware. The h
 
 ## Context menus
 
-### Add Vlippoo Box+
-You can use this menu option to add a [Vlippoo Box Plus module](#vlippoo-box-plus) to your patch. If you purchased the Vlippoo Box then this is the only way to access the Vlippoo Box Plus. If you purchased the entire Chaos Boxes plugin then you can access the Vlippoo Box Plus through your module browser, and there is no need to use this option.
-
 ### Attenuator configuration
 Controls the behavior of the Rungler and CV modulation knobs
 - **Unipolar** ***(default)*** - Attenuates the modulation signal to between 0% and 100%
@@ -993,8 +985,6 @@ Venom Themes, Custom Names, and Parameter Locks and Custom Defaults are availabl
 *Quick Links: [Intro](#vlippoo-box-plus) | [Oscillators](#oscillator-section) | [Modulators](#modulator-section) | [Mixer](#mixer-section) | [Filter](#filter-section-1) | [Chaos Boxes](#venom-chaos-boxes-plugin) | [Venom Premium TOC](README.md#table-of-contents)*
 
 ![Vlippoo Box Plus module image](doc/VlippooBoxPlus.png)  
-
-***Important note - if you purchased the Vlippoo Box rather than the entire Chaos Boxes plugin then your module browser will not show the Vlippoo Box Plus. You can still access the Vlippoo Box Plus by inserting a Vlippoo Box into your patch, and then use the "Add Vlippoo Box+" context menu option. You can delete the Vlippoo Box after the Vlippoo Box Plus has been added to your patch.***
 
 The Vlipoo Box Plus is an enhanced version of a Vlippoo Box. Although it looks completely different, it has all of the same components as the basic Vlippoo Box. Refer to the [Vlippoo Box introduction](https://github.com/DaveBenham/VenomPremiumDev/blob/main/VenomChaosBoxes.md#vlippoo-box) for the basic design.
 
