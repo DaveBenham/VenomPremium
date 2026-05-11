@@ -1,6 +1,6 @@
 # Venom Chaos Boxes Change Log
 
-## 2.0.0 (2026-03-??)
+## 2.0.0 (2026-04-09)
 ### Initial Release
 - Venjolin
 - Venjolin+
