@@ -38,7 +38,7 @@ Thanks to my beta testers - It is not possible to release a quality product with
 - Stephan Muesch (rsmus7)
 - Koen Kaptijn
 
-In particular, the  would not sound as good as it does without the many contributions from Koen. Years ago we both started emulating the Blippoo Box using existing free VCV modules. We traded ideas, shared patches, and developed a basic understanding of how the Blippoo Box works. His involvement continued during development and testing of the Venom  module. Koen's insights were critical to the final product.
+In particular, the Vlippoo Box would not sound as good as it does without the many contributions from Koen. Years ago we both started emulating the Blippoo Box using existing free VCV modules. We traded ideas, shared patches, and developed a basic understanding of how the Blippoo Box works. His involvement continued during development and testing of the Venom  module. Koen's insights were critical to the final product.
 
 *[Venom Premium TOC](README.md#table-of-contents)*
 
