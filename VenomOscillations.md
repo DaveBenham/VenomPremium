@@ -1,5 +1,5 @@
 # Venom Oscillations plugin
-Venom Oscillations [version 2.1.0](VenomOscillationsChangeLog.md) for VCV Rack 2 is copyright 2025 Dave Benham and licensed under the [VCV Rack End User License Agreement](LICENSE.md).
+Venom Oscillations [version 2.1.1](VenomOscillationsChangeLog.md) for VCV Rack 2 is copyright 2025, 2026 Dave Benham and licensed under the [VCV Rack End User License Agreement](LICENSE.md).
 
 Thank you for your interest in the Venom Oscillations plugin for VCV Rack 2. This plugin is a collection of complex oscillator modules that produce interesting sounds that are difficult to create otherwise.
 
