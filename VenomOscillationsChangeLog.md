@@ -1,6 +1,6 @@
 # Venom Oscillations Change Log
 
-## 2.1.1 (2026-03-??)
+## 2.1.1 (2026-04-09)
 ### Enhancement
 - Improve rendering of square switches
 
