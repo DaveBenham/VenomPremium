@@ -1,6 +1,6 @@
 # Venom Chaos Boxes Change Log
 
-## 2.1.0 (2026-08-??)
+## 2.1.0 (2026-08-13)
 ### Enhancements
 - Hybrid Knot
   - Envelope outputs are no longer band limited by default. The low pass filter used by band limiting could prevent very fast envelopes from reaching zero.
