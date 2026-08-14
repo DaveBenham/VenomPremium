@@ -1,5 +1,5 @@
 # Venom Chaos Boxes plugin
-Venom Chaos Boxes [version 2.0.0](VenomChaosBoxesChangeLog.md) for VCV Rack 2 is copyright 2026 Dave Benham and licensed under the [VCV Rack End User License Agreement](LICENSE.md).
+Venom Chaos Boxes [version 2.1.0](VenomChaosBoxesChangeLog.md) for VCV Rack 2 is copyright 2026 Dave Benham and licensed under the [VCV Rack End User License Agreement](LICENSE.md).
 
 Thank you for your interest in the Venom Chaos Boxes plugin for VCV Rack 2. This is a collection of modules inspired by small analog hardware synthesizers that rely on simple circuits with multiple feedback sources to generate chaotic signals. Nothing is random, but the network of signals can be so dependent on starting conditions that there is no simple formula that predicts what the outcome will be at any specific moment.
 
@@ -83,6 +83,14 @@ All Hybrid Knot inputs are upsampled with interpolation to the selected oversamp
 
 #### Save shift register states
 By default the shift registers are cleared when a patch is first loaded. The "Save shift register states" option causes the shift register values to be stored with the patch so the sequencer resumes where it left off when the patch is reloaded.
+
+#### Enable band limited envelope outputs
+Unlike all the other outputs, envelope outputs are not bandlimited by default.
+
+Activating this option applies band-limiting to the envelope outputs. This should only be enabled when envelopes are used as an audio source because the band-limiting low pass filter can prevent extremely fast envelopes from reaching zero.
+
+#### Restrict synced envelope triggers to high gates
+By default when using synced envelopes, the delayed trigger may occur any time after the initiating trigger. If this option is enabled then delayed triggers are aborted if the VCA input does not cross zero until after the initiating gate.
 
 #### Expander options
 There are four options to add [Chaos Gates](#chaos-gates-expander) and/or [Chaos Volts](#chaos-volts-expander) expanders to the left or right of the Hybrid Knot. The expanders give access to the underlying shift register bits. Expanders to the left use the voice 1 (top) shift register, and expanders to the right use the voice 2 (bottom) shift register.
@@ -253,9 +261,11 @@ Changing between linear and exponential does not affect the decay time for the H
 The option for exponential or linear decay is a feature of the Double Knot hardware version 3. The hardware uses a dip switch.
 
 ### Sync button
-When enabled (orange), each envelope trigger is delayed until the corresponding VCA input crosses 0V. This is done to minimize clicks in the output that can arise from the instant envelope attack. If the trigger goes low before the VCA input crosses 0 then the trigger is ignored.
+When enabled (orange), each envelope trigger is delayed until the corresponding VCA input crosses 0V. This is done to minimize clicks in the output that can arise from the instant envelope attack.
 
 When disabled the envelope trigger is immediate.
+
+By default, there is no limit to the length of the sync trigger delay. There is a module context menu option to restrict delayed triggers to when the initiating gate is high, in which case the trigger is ignored if the initiating gate goes low before the VCA input crosses 0. This only makes a difference when using low frequency audio with very high clock rates.
 
 The sync option is a feature of the Double Knot hardware version 3. The hardware uses a dip switch. Lorre Mill calls it "zero crossing" vs. "phase irreverent".
 
@@ -276,6 +286,8 @@ The Double Knot hardware does not have this option. Double Knot envelope trigger
 
 ### Unlabled output and LED
 This is the final unipolar envelope output. The intensity of the LED light next to the output is proportional to the current level of the envelope.
+
+Note that envelope outputs are not bandlimited by default. If you want to use the envelope as an audio source and are experiencing digital aliasing, then you may want to enable band-limiting via the module context menu. Band-limiting should not be enabled for non-audio uses because the low pass filter can prevent very fast envelopes from reaching zero.
 
 The envelope output is routed to the corresponding VCA Level input by default.
 

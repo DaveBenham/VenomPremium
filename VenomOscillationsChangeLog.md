@@ -1,5 +1,9 @@
 # Venom Oscillations Change Log
 
+## 2.1.2 (2026-08-??)
+### Bug Fix
+- Sofia's Daugher - Removed string allocation during knob reconfiguration from the dsp thread. Should be a transparent change, but old code had the potential to cause rare hiccups in the sound.
+
 ## 2.1.1 (2026-04-09)
 ### Enhancement
 - Improve rendering of square switches
