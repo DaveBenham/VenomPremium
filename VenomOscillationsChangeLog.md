@@ -1,4 +1,4 @@
-# Venom Oscillations Change Log
+# [Venom Oscillations](https://github.com/DaveBenham/VenomPremium/blob/main/VenomOscillations.md#venom-oscillations-plugin) Change Log
 
 ## 2.1.2 (2026-08-13)
 ### Bug Fix
