@@ -1,4 +1,4 @@
-# Venom Chaos Boxes Change Log
+# [Venom Chaos Boxes](https://github.com/DaveBenham/VenomPremium/blob/main/VenomChaosBoxes.md#venom-chaos-boxes-plugin) Change Log
 
 ## 2.1.0 (2026-08-13)
 ### Enhancements
