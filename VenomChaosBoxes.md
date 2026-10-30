@@ -3,6 +3,8 @@ Venom Chaos Boxes [version 2.1.0](VenomChaosBoxesChangeLog.md) for VCV Rack 2 is
 
 Thank you for your interest in the Venom Chaos Boxes plugin for VCV Rack 2. This is a collection of modules inspired by small analog hardware synthesizers that rely on simple circuits with multiple feedback sources to generate chaotic signals. Nothing is random, but the network of signals can be so dependent on starting conditions that there is no simple formula that predicts what the outcome will be at any specific moment.
 
+Check out this [YouTube playlist](https://www.youtube.com/playlist?list=PLKFcPDAVe2NU) for a series of videos showcasing modules from the Chaos Boxes collection.
+
 There are three base modules, along with two variants, plus two expanders that work with the digital shift registers within all the base modules.
 
 - Inspiration 1: the Lorre Mill Double Knot versions 2 and 3 by Will Schorre
